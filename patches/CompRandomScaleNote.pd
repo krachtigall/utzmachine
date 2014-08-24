@@ -1,0 +1,149 @@
+#N canvas 293 529 628 365 10;
+#N canvas 960 87 956 954 guts 1;
+#X floatatom 42 119 5 0 0 0 - - -;
+#X floatatom 42 204 5 0 0 0 - - -;
+#X obj 42 258 noteout 0;
+#X obj 42 92 random 8;
+#X obj 42 146 tabread scale;
+#X obj 42 178 + 48;
+#X obj 42 231 makenote 100 250;
+#X obj 364 49 loadbang;
+#X msg 289 84 \; scale 0 0 2 4 5 7 9 11 12;
+#X obj 289 18 table scale;
+#X obj 42 28 r \$0-on;
+#X obj 289 125 r \$0-dorian;
+#X obj 289 204 r \$0-phrygian;
+#X obj 289 283 r \$0-lydian;
+#X msg 289 321 \; scale 0 0 2 4 6 7 9 11 12;
+#X obj 289 362 r \$0-mixolydian;
+#X msg 289 400 \; scale 0 0 2 4 5 7 9 10 12;
+#X msg 289 479 \; scale 0 0 2 3 5 7 8 10 12;
+#X obj 289 441 r \$0-aeolian;
+#X obj 289 520 r \$0-lokrian;
+#X msg 289 558 \; scale 0 0 1 3 5 6 8 10 12;
+#X obj 289 46 r \$0-ionian;
+#X obj 289 66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 289 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 289 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 289 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 289 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 289 163 \; scale 0 0 2 3 5 7 9 10 12;
+#X msg 289 242 \; scale 0 0 1 3 5 7 8 10 12;
+#X obj 289 461 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 289 540 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 123 14 r \$0-bpm;
+#X obj 42 64 metronomeBPM;
+#X obj 10 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 125 38 5 0 0 0 - - -;
+#X obj 137 152 r \$0-noteBase;
+#X obj 90 179 r \$0-noteVelocity;
+#X obj 121 198 r \$0-noteLength;
+#X obj 564 30 r \$0-scaleChoice;
+#X obj 564 72 sel 0 1 2 3 4 5 6;
+#X obj 564 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 564 114 s \$0-ionian;
+#X obj 578 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 592 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 578 154 s \$0-dorian;
+#X obj 592 194 s \$0-phrygian;
+#X obj 606 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 606 234 s \$0-lydian;
+#X obj 620 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 620 274 s \$0-mixolydian;
+#X obj 634 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 634 314 s \$0-aeolian;
+#X obj 648 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 648 354 s \$0-lokrian;
+#X obj 587 403 bng 15 250 50 0 \$0-ionian empty ionian 17 7 0 10 -262144
+-1 -1;
+#X obj 587 423 bng 15 250 50 0 \$0-dorian empty dorian 17 7 0 10 -262144
+-1 -1;
+#X obj 587 443 bng 15 250 50 0 \$0-phrygian empty phrygian 17 7 0 10
+-262144 -1 -1;
+#X obj 587 463 bng 15 250 50 0 \$0-lydian empty lydian 17 7 0 10 -262144
+-1 -1;
+#X obj 587 483 bng 15 250 50 0 \$0-mixolydian empty mixolydian 17 7
+0 10 -262144 -1 -1;
+#X obj 587 503 bng 15 250 50 0 \$0-aeolian empty aeolian 17 7 0 10
+-262144 -1 -1;
+#X obj 587 523 bng 15 250 50 0 \$0-lokrian empty lokrian 17 7 0 10
+-262144 -1 -1;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
+#X connect 6 1 2 1;
+#X connect 7 0 22 0;
+#X connect 10 0 32 0;
+#X connect 11 0 23 0;
+#X connect 12 0 24 0;
+#X connect 13 0 25 0;
+#X connect 15 0 26 0;
+#X connect 18 0 29 0;
+#X connect 19 0 30 0;
+#X connect 21 0 22 0;
+#X connect 22 0 8 0;
+#X connect 23 0 27 0;
+#X connect 24 0 28 0;
+#X connect 25 0 14 0;
+#X connect 26 0 16 0;
+#X connect 29 0 17 0;
+#X connect 30 0 20 0;
+#X connect 31 0 34 0;
+#X connect 32 0 3 0;
+#X connect 32 0 33 0;
+#X connect 34 0 32 1;
+#X connect 35 0 5 1;
+#X connect 36 0 6 1;
+#X connect 37 0 6 2;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 39 1 42 0;
+#X connect 39 2 43 0;
+#X connect 39 3 46 0;
+#X connect 39 4 48 0;
+#X connect 39 5 50 0;
+#X connect 39 6 52 0;
+#X connect 40 0 41 0;
+#X connect 42 0 44 0;
+#X connect 43 0 45 0;
+#X connect 46 0 47 0;
+#X connect 48 0 49 0;
+#X connect 50 0 51 0;
+#X connect 52 0 53 0;
+#X restore 424 322 pd guts;
+#X obj 46 30 tgl 15 0 \$0-on empty on 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 48 74 nbx 5 14 1 1e+37 0 1 \$0-bpm empty bpm 0 -8 0 10 -262144
+-1 -1 400 256;
+#X obj 48 116 nbx 5 14 0 116 0 1 \$0-noteBase empty noteBase 0 -8 0
+10 -262144 -1 -1 48 256;
+#X obj 49 152 nbx 5 14 0 256 0 1 \$0-noteVelocity empty noteVelocity
+0 -8 0 10 -262144 -1 -1 100 256;
+#X obj 48 188 nbx 5 14 0 1e+37 0 1 \$0-noteLength empty noteLength
+0 -8 0 10 -262144 -1 -1 150 256;
+#X obj 153 87 vradio 15 1 0 7 \$0-scaleChoice empty scale 0 -8 0 10
+-262144 -1 -1 0;
+#X text 168 86 ionian;
+#X text 169 100 dorian;
+#X text 169 116 phrygian;
+#X text 170 133 lydian;
+#X text 170 147 mixolydian;
+#X text 170 162 aeolian;
+#X text 171 176 lokrian;

@@ -1,0 +1,34 @@
+#N canvas 857 331 450 427 10;
+#X obj 112 30 inlet;
+#X text 104 3 start;
+#X text 248 5 reset;
+#X obj 249 37 inlet;
+#X obj 249 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 176 172 metro 1000;
+#X obj 176 216 + 1;
+#X obj 174 196 f;
+#X floatatom 203 274 5 0 0 0 - - -;
+#X text 250 261 current time;
+#X obj 178 308 outlet;
+#X obj 106 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 121 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 59 79 0;
+#X msg 248 91 -1;
+#X obj 197 131 t b f b;
+#X connect 0 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 14 0;
+#X connect 5 0 7 0;
+#X connect 5 0 12 0;
+#X connect 6 0 7 1;
+#X connect 6 0 10 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 11 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 15 0;
+#X connect 15 0 7 0;
+#X connect 15 1 7 1;
