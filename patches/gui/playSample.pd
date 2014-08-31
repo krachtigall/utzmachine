@@ -1,4 +1,4 @@
-#N canvas 469 275 667 300 10;
+#N canvas 467 273 667 300 10;
 #X obj 54 68 inlet start;
 #X obj 190 68 inlet file;
 #X obj 54 270 readsf~ 2;
@@ -9,10 +9,10 @@
 #X obj 54 191 route bang;
 #X obj 190 192 symbol;
 #X obj 54 122 t a b;
-#X obj 173 107 bng 15 250 50 0 empty empty Play 17 7 0 10 -262144 -1
--1;
+#X obj 171 105 bng 20 250 50 0 empty empty Play 22 10 0 10 -262144
+-1 -1;
 #X obj 200 143 openpanel;
-#X obj 223 107 bng 15 250 50 0 empty empty load_file 17 7 0 10 -262144
+#X obj 224 105 bng 20 250 50 0 empty empty load_file 22 10 0 10 -262144
 -1 -1;
 #X symbolatom 303 107 30 0 0 0 - - -;
 #X obj 233 302 outlet file;
