@@ -1,0 +1,29 @@
+#N struct 1283-matrixctrl float x float y float size float color float
+state;
+#N canvas 208 98 1386 642 10;
+#X floatatom 52 146 5 0 0 0 tickNumber - -;
+#X msg 91 399 col \$1;
+#X obj 244 467 iemmatrix/matrix;
+#X obj 227 183 vradio 13 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 193 146 - 1;
+#X obj 244 500 outlet;
+#X obj 257 26 lbang;
+#X msg 257 54 zeros 32 16;
+#X obj 244 134 iemmatrix/matrix;
+#X obj 91 87 route float;
+#X obj 92 26 inlet;
+#X obj 244 182 ../jmmmp/matrixctrl 32 16;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 0 0;
+#X connect 9 0 4 0;
+#X connect 9 0 1 0;
+#X connect 9 1 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 2 0;
+#X coords 0 -1 1 1 450 245 1 220 155;
