@@ -1,13 +1,13 @@
-#N canvas 949 87 956 954 10;
+#N canvas 944 87 956 954 10;
 #X obj -3 293 outlet~;
 #X obj 811 293 outlet~;
-#X obj 90 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 79 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 179 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 167 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 259 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 255 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 349 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 340 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 112 -207 inlet b-1;
 #X obj 190 -19 inlet b-2;
@@ -71,13 +71,13 @@
 #X obj 607 4 r sample-7;
 #X obj 527 4 r sample-6;
 #X obj 447 4 r sample-5;
-#X obj 434 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 425 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 520 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 516 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 607 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 599 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 694 85 bng 48 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 685 81 bng 56 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 317 -140 volumes \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8;
 #X obj 167 -130 unpack s s s s s s s s;
