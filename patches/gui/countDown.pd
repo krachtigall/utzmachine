@@ -1,4 +1,4 @@
-#N canvas 259 450 528 411 10;
+#N canvas 547 432 528 411 10;
 #X floatatom -61 407 5 0 0 0 - - -;
 #X obj 117 167 tgl 15 0 empty empty on 0 -6 0 10 -262144 -1 -1 0 1
 ;
@@ -9,17 +9,17 @@
 #X obj -18 332 t b f;
 #X obj 58 167 nbx 5 14 1 1e+37 0 0 empty empty Time-limit 0 -8 0 10
 -262144 -1 -1 60 256;
-#X obj 259 33 inlet;
-#X obj 96 29 inlet;
-#X obj 151 29 inlet;
+#X obj 259 3 inlet;
+#X obj 96 -1 inlet;
+#X obj 151 -1 inlet;
 #X obj 167 169 nbx 5 14 -1e+37 1e+37 0 0 empty empty countdown 0 -8
 0 10 -262144 -1 -1 60 256;
 #X obj 227 167 bng 15 250 50 0 empty empty stop 0 -7 0 10 -262144 -1
 -1;
 #X obj 148 394 sel 1;
-#X msg 118 87 0;
-#X obj -5 29 loadbang;
-#X msg 54 89 60;
+#X msg 8 57 0;
+#X obj -5 -1 loadbang;
+#X msg -56 59 60;
 #X obj 142 361 <= 0;
 #X obj -40 289 spigot;
 #X obj 105 301 > 0;
@@ -29,13 +29,13 @@
 #X floatatom 90 389 5 0 0 0 - - -;
 #X obj 122 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 51 253 1;
+#X msg 101 273 1;
 #X obj 69 214 t b b;
 #X obj 272 329 outlet;
-#X msg 226 99 1;
-#X msg 275 97 0;
-#X obj 225 76 route start bang float stop restart;
-#X obj 348 107 t b b;
+#X msg 76 99 1;
+#X msg 125 97 0;
+#X obj 65 46 route start bang float stop restart;
+#X obj 208 87 t b b;
 #X obj -19 243 ../utls/stopWatch;
 #X connect 1 0 30 0;
 #X connect 3 0 24 0;
@@ -64,7 +64,7 @@
 #X connect 18 0 19 0;
 #X connect 18 0 20 0;
 #X connect 23 0 17 1;
-#X connect 24 0 30 1;
+#X connect 24 0 30 0;
 #X connect 24 1 23 0;
 #X connect 26 0 1 0;
 #X connect 27 0 1 0;
