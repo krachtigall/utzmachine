@@ -1,4 +1,4 @@
-#N canvas 450 405 792 552 10;
+#N canvas 960 431 446 241 10;
 #X obj 147 118 tgl 20 0 \$0-mute empty Mute 0 -7 0 12 -1 -258113 -1
 0 1;
 #N canvas 1299 362 534 632 audio 0;
@@ -71,17 +71,20 @@
 #X connect 29 0 22 0;
 #X connect 30 0 2 0;
 #X connect 30 0 21 0;
-#X restore 295 113 pd audio;
+#X restore 245 113 pd audio;
 #X obj 108 117 knob 20 20 0 2 0 0 \$0-vol empty Volume 0 -8 0 10 -1
--1 -1 0 1;
-#X obj 96 47 s \$0-tick;
-#X obj 95 7 inlet;
-#X obj 175 7 inlet;
-#X obj 176 47 s \$0-first;
-#X obj 101 193 outlet~;
-#X obj 101 165 r~ \$0-out;
-#X obj 213 198 dac~;
+-1 -1 550 1;
+#X obj 246 77 s \$0-tick;
+#X obj 246 49 inlet;
+#X obj 326 49 inlet;
+#X obj 326 77 s \$0-first;
+#X obj 246 183 outlet~;
+#X obj 246 155 r~ \$0-out;
+#X obj 108 45 loadbang;
+#X msg 108 68 1;
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;
 #X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
 #X coords 0 -1 1 1 80 45 2 100 100;
