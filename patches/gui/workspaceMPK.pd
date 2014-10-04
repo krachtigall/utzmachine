@@ -1,4 +1,4 @@
-#N canvas 956 87 956 989 10;
+#N canvas 955 87 956 989 10;
 #X declare -lib ../utls;
 #X msg 10 312 volume 0.6;
 #X msg 75 74 volumes 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7;
@@ -28,7 +28,6 @@
 #X restore 13 -100 pd audio;
 #X obj 520 730 dac~;
 #X obj 142 -8 oneButtonTapMetro;
-#X obj 119 -101 mpkMini;
 #X obj 116 528 mixerX8;
 #X obj 13 39 loadbang;
 #X obj 12 14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -45,17 +44,28 @@
 #X connect 3 0 0 0;
 #X restore 13 -80 pd controls;
 #X obj 76 42 r stop;
-#X connect 0 0 7 0;
+#X obj 457 -38 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 418 -59 mpkMini;
+#X obj 119 -101 mpkMini;
+#X obj 419 -12 s program;
+#X obj 172 27 r program;
+#X msg 172 49 preset \$1;
+#X connect 0 0 6 0;
 #X connect 1 0 2 0;
-#X connect 1 0 7 0;
-#X connect 2 0 7 1;
-#X connect 2 1 7 2;
+#X connect 1 0 6 0;
+#X connect 2 0 6 1;
+#X connect 2 1 6 2;
 #X connect 5 0 2 0;
-#X connect 6 1 5 0;
-#X connect 6 1 2 0;
-#X connect 7 0 4 0;
-#X connect 7 1 4 1;
-#X connect 8 0 1 0;
-#X connect 8 0 0 0;
-#X connect 9 0 8 0;
-#X connect 11 0 2 0;
+#X connect 6 0 4 0;
+#X connect 6 1 4 1;
+#X connect 7 0 1 0;
+#X connect 7 0 0 0;
+#X connect 8 0 7 0;
+#X connect 10 0 2 0;
+#X connect 11 0 14 0;
+#X connect 12 4 11 0;
+#X connect 13 1 5 0;
+#X connect 13 1 2 0;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
