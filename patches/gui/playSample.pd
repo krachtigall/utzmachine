@@ -1,6 +1,6 @@
-#N canvas 467 273 667 300 10;
-#X obj 54 68 inlet start;
-#X obj 190 68 inlet file;
+#N canvas 943 371 667 391 10;
+#X obj 14 18 inlet start;
+#X obj 191 22 inlet file;
 #X obj 54 270 readsf~ 2;
 #X msg 54 212 start;
 #X obj 114 302 outlet~ r;
@@ -15,9 +15,11 @@
 #X obj 224 105 bng 20 250 50 0 empty empty load_file 22 10 0 10 -262144
 -1 -1;
 #X symbolatom 303 107 30 0 0 0 - - -;
-#X obj 233 302 outlet file;
-#X msg 265 250 \$1;
-#X connect 0 0 9 0;
+#X obj 258 295 outlet file;
+#X msg 262 250 \$1;
+#X obj 14 38 route bang start stop;
+#X msg 148 226 stop;
+#X connect 0 0 16 0;
 #X connect 1 0 8 0;
 #X connect 2 0 5 0;
 #X connect 2 1 4 0;
@@ -34,4 +36,8 @@
 #X connect 11 0 8 0;
 #X connect 12 0 11 0;
 #X connect 15 0 14 0;
+#X connect 16 0 10 0;
+#X connect 16 1 10 0;
+#X connect 16 2 17 0;
+#X connect 17 0 2 0;
 #X coords 0 -1 1 1 330 30 2 165 100;
