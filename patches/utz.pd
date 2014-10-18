@@ -1,4 +1,4 @@
-#N canvas 522 119 956 954 10;
+#N canvas 517 114 956 954 10;
 #X msg 20 322 volume 0.6;
 #N canvas 273 283 450 300 audio 0;
 #N canvas 746 422 450 300 guts 0;
@@ -43,7 +43,7 @@
 #X obj 429 -2 s program;
 #X obj 182 37 r program;
 #X msg 182 59 preset \$1;
-#N canvas 624 231 450 300 ctrl2volumes 0;
+#N canvas 618 225 450 300 ctrl2volumes 0;
 #X obj 58 157 pack f f f f f f f f;
 #X obj 85 78 route 1 2 3 4 5 6 7 8;
 #X obj 58 50 t b a;
@@ -84,7 +84,6 @@
 #X obj 129 -91 gui/mpkMini;
 #X obj 152 2 gui/oneButtonTapMetro;
 #X obj 128 118 gui/samplerX8;
-#X obj 77 439 gui/mixerX8;
 #X obj 428 -49 gui/mpkMini;
 #X obj 746 -64 gui/mpkMini;
 #X msg 85 84 volumes 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6;
@@ -105,26 +104,94 @@
 #X obj 724 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 707 376 cmpstn/multiMelody;
-#X connect 2 0 18 0;
+#X obj 312 576 gui/mixerX8 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _;
+#N canvas 1200 288 641 493 mixercontrol 0;
+#X obj 87 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X msg 87 256 mixer ch1 volume \$1;
+#X obj 87 444 outlet;
+#X obj 107 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 127 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 147 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 167 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 187 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 207 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 227 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X obj 257 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8890 1;
+#X msg 257 416 mixer master volume \$1;
+#X msg 107 276 mixer ch2 volume \$1;
+#X msg 127 296 mixer ch3 volume \$1;
+#X msg 147 316 mixer ch4 volume \$1;
+#X msg 167 336 mixer ch5 volume \$1;
+#X msg 187 356 mixer ch6 volume \$1;
+#X msg 207 376 mixer ch7 volume \$1;
+#X msg 227 396 mixer ch8 volume \$1;
+#X obj 160 5 loadbang;
+#X msg 158 31 0.7;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 12 0;
+#X connect 4 0 13 0;
+#X connect 5 0 14 0;
+#X connect 6 0 15 0;
+#X connect 7 0 16 0;
+#X connect 8 0 17 0;
+#X connect 9 0 18 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 14 0 2 0;
+#X connect 15 0 2 0;
+#X connect 16 0 2 0;
+#X connect 17 0 2 0;
+#X connect 18 0 2 0;
+#X connect 19 0 20 0;
+#X connect 20 0 0 0;
+#X connect 20 0 3 0;
+#X connect 20 0 4 0;
+#X connect 20 0 5 0;
+#X connect 20 0 6 0;
+#X connect 20 0 7 0;
+#X connect 20 0 8 0;
+#X connect 20 0 9 0;
+#X connect 20 0 10 0;
+#X restore 776 433 pd mixercontrol;
+#X msg 250 315 mixer ch1 volume 0.7 \, mixer ch2 volume 0.7 \, mixer
+ch3 volume 0.7 \, mixer ch4 volume 0.7 \, mixer ch5 volume 0.7 \, mixer
+ch6 volume 0.7 \, mixer ch7 volume 0.7 \, mixer ch8 volume 0.7 \, mixer
+master volume 0.7;
+#X connect 2 0 17 0;
 #X connect 2 0 0 0;
+#X connect 2 0 24 0;
 #X connect 3 0 2 0;
 #X connect 5 0 14 0;
 #X connect 6 0 7 0;
 #X connect 8 0 9 0;
 #X connect 9 0 14 0;
-#X connect 10 0 15 0;
+#X connect 10 0 22 16;
 #X connect 12 1 13 0;
 #X connect 12 1 14 0;
 #X connect 13 0 14 0;
-#X connect 14 0 15 1;
-#X connect 14 1 15 2;
-#X connect 15 0 11 0;
-#X connect 15 1 11 1;
-#X connect 16 4 6 0;
-#X connect 17 3 10 0;
-#X connect 18 0 14 0;
-#X connect 18 0 15 0;
-#X connect 20 0 22 0;
-#X connect 21 0 20 0;
-#X connect 22 0 15 13;
-#X connect 22 0 15 14;
+#X connect 14 0 22 0;
+#X connect 14 1 22 1;
+#X connect 15 4 6 0;
+#X connect 16 3 10 0;
+#X connect 17 0 14 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 15;
+#X connect 21 0 22 14;
+#X connect 22 0 11 0;
+#X connect 22 1 11 1;
+#X connect 23 0 22 16;
+#X connect 24 0 22 16;
