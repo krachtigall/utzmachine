@@ -1,4 +1,4 @@
-#N canvas 523 120 956 954 10;
+#N canvas 522 119 956 954 10;
 #X msg 20 322 volume 0.6;
 #N canvas 273 283 450 300 audio 0;
 #N canvas 746 422 450 300 guts 0;
