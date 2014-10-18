@@ -1,5 +1,4 @@
-#N canvas 0 87 956 954 10;
-#X declare -lib ../utls;
+#N canvas 523 120 956 954 10;
 #X msg 20 322 volume 0.6;
 #N canvas 273 283 450 300 audio 0;
 #N canvas 746 422 450 300 guts 0;
@@ -89,6 +88,23 @@
 #X obj 428 -49 gui/mpkMini;
 #X obj 746 -64 gui/mpkMini;
 #X msg 85 84 volumes 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6;
+#N canvas 1088 260 450 300 init 0;
+#X obj 81 54 loadbang;
+#X obj 88 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 123 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X symbolatom 28 140 10 0 0 0 - - -;
+#X obj 159 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 2 0;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X restore 363 42 pd init;
+#X obj 705 340 loadbang;
+#X obj 724 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 707 376 cmpstn/multiMelody;
 #X connect 2 0 18 0;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
@@ -107,3 +123,8 @@
 #X connect 16 4 6 0;
 #X connect 17 3 10 0;
 #X connect 18 0 14 0;
+#X connect 18 0 15 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 22 0 15 13;
+#X connect 22 0 15 14;

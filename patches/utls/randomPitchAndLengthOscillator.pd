@@ -1,4 +1,4 @@
-#N canvas 655 257 956 617 10;
+#N canvas 47 419 956 617 10;
 #X obj 394 216 randomPitchOscillator;
 #X obj 51 14 inlet;
 #X obj 129 14 inlet;
@@ -29,6 +29,11 @@
 #X obj 158 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 196 235 ../utls/randomMetronome;
+#X obj 29 97 loadbang;
+#X obj 150 90 loadbang;
+#X obj 156 111 t b b;
+#X obj 241 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 23 0;
 #X connect 1 0 27 0;
 #X connect 2 0 7 0;
@@ -51,4 +56,9 @@
 #X connect 25 0 27 0;
 #X connect 26 0 27 0;
 #X connect 27 0 0 0;
+#X connect 28 0 26 0;
+#X connect 29 0 30 0;
+#X connect 30 0 26 0;
+#X connect 30 1 24 0;
+#X connect 31 0 30 0;
 #X coords 0 -1 1 1 400 150 1 190 210;
