@@ -1,4 +1,4 @@
-#N canvas 920 487 513 347 10;
+#N canvas 918 485 513 347 10;
 #X obj 23 -18 inlet \$0-tap;
 #X obj 114 108 timer;
 #X floatatom 184 145 10 0 0 0 - - -;
@@ -21,6 +21,7 @@
 #X obj 281 4 loadbang;
 #X obj 124 169 split 100 10000;
 #X msg 284 83 500;
+#X msg 292 220 timedelta \$1;
 #X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 1 0 18 0;
@@ -45,4 +46,6 @@
 #X connect 18 0 4 1;
 #X connect 18 0 10 0;
 #X connect 18 0 16 0;
+#X connect 18 0 20 0;
 #X connect 19 0 18 0;
+#X connect 20 0 14 0;
