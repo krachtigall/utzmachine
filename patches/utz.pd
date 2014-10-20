@@ -1,4 +1,4 @@
-#N canvas 511 108 922 902 10;
+#N canvas 510 107 922 902 10;
 #X msg 20 322 volume 0.6;
 #N canvas 273 283 450 300 audio 0;
 #N canvas 746 422 450 300 guts 0;
@@ -54,66 +54,6 @@
 #X obj 724 310 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 707 376 cmpstn/multiMelody;
-#N canvas 1197 285 641 493 mixercontrol 0;
-#X obj 87 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X msg 87 256 mixer ch1 volume \$1;
-#X obj 87 444 outlet;
-#X obj 107 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 127 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 147 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 167 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 187 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 207 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 227 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X obj 257 101 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
-#X msg 257 416 mixer master volume \$1;
-#X msg 107 276 mixer ch2 volume \$1;
-#X msg 127 296 mixer ch3 volume \$1;
-#X msg 147 316 mixer ch4 volume \$1;
-#X msg 167 336 mixer ch5 volume \$1;
-#X msg 187 356 mixer ch6 volume \$1;
-#X msg 207 376 mixer ch7 volume \$1;
-#X msg 227 396 mixer ch8 volume \$1;
-#X obj 160 5 loadbang;
-#X msg 158 31 0.7;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 3 0 12 0;
-#X connect 4 0 13 0;
-#X connect 5 0 14 0;
-#X connect 6 0 15 0;
-#X connect 7 0 16 0;
-#X connect 8 0 17 0;
-#X connect 9 0 18 0;
-#X connect 10 0 11 0;
-#X connect 11 0 2 0;
-#X connect 12 0 2 0;
-#X connect 13 0 2 0;
-#X connect 14 0 2 0;
-#X connect 15 0 2 0;
-#X connect 16 0 2 0;
-#X connect 17 0 2 0;
-#X connect 18 0 2 0;
-#X connect 19 0 20 0;
-#X connect 20 0 0 0;
-#X connect 20 0 3 0;
-#X connect 20 0 4 0;
-#X connect 20 0 5 0;
-#X connect 20 0 6 0;
-#X connect 20 0 7 0;
-#X connect 20 0 8 0;
-#X connect 20 0 9 0;
-#X connect 20 0 10 0;
-#X restore 776 433 pd mixercontrol;
 #N canvas 606 213 450 300 ctrl2volume 0;
 #X obj 154 105 / 127;
 #X obj 58 9 inlet;
@@ -128,7 +68,7 @@
 #X connect 4 0 5 0;
 #X connect 5 0 2 0;
 #X restore 824 77 pd ctrl2volume;
-#X obj 759 534 prepend mixer;
+#X obj 793 533 prepend mixer;
 #X obj 600 75 prepend mixer;
 #X obj 691 39 spigot;
 #X obj 732 15 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -166,41 +106,42 @@ _ _ _ _;
 #X connect 9 0 1 0;
 #X restore 183 168 pd midi2plays;
 #X obj 183 191 prepend sampler;
+#X obj 194 125 gui/mixer8-control;
 #X connect 2 0 16 0;
 #X connect 2 0 0 0;
-#X connect 2 0 30 0;
+#X connect 2 0 29 0;
 #X connect 3 0 2 0;
 #X connect 5 0 13 0;
 #X connect 6 0 7 0;
 #X connect 8 0 9 0;
 #X connect 9 0 13 0;
 #X connect 11 1 12 0;
-#X connect 11 1 32 0;
+#X connect 11 1 31 0;
 #X connect 12 0 13 0;
-#X connect 12 0 32 0;
-#X connect 13 0 31 0;
-#X connect 13 1 31 1;
-#X connect 13 2 31 16;
+#X connect 12 0 31 0;
+#X connect 13 0 30 0;
+#X connect 13 1 30 1;
+#X connect 13 2 30 16;
 #X connect 14 4 6 0;
-#X connect 15 3 21 0;
+#X connect 15 3 20 0;
 #X connect 16 0 13 0;
 #X connect 17 0 19 0;
 #X connect 18 0 17 0;
-#X connect 19 0 31 15;
-#X connect 19 0 31 14;
-#X connect 20 0 31 16;
-#X connect 21 0 24 0;
-#X connect 21 0 26 0;
-#X connect 22 0 13 0;
-#X connect 23 0 28 0;
-#X connect 24 0 23 0;
-#X connect 25 0 24 1;
-#X connect 26 0 22 0;
-#X connect 27 0 26 1;
-#X connect 28 0 13 0;
-#X connect 30 0 31 16;
-#X connect 31 0 10 0;
-#X connect 31 1 10 1;
-#X connect 31 2 29 0;
-#X connect 32 0 33 0;
+#X connect 19 0 30 15;
+#X connect 19 0 30 14;
+#X connect 20 0 23 0;
+#X connect 20 0 25 0;
+#X connect 21 0 13 0;
+#X connect 22 0 27 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 1;
+#X connect 25 0 21 0;
+#X connect 26 0 25 1;
+#X connect 27 0 13 0;
+#X connect 29 0 30 16;
+#X connect 30 0 10 0;
+#X connect 30 1 10 1;
+#X connect 30 2 28 0;
+#X connect 31 0 32 0;
+#X connect 32 0 13 0;
 #X connect 33 0 13 0;
