@@ -1,5 +1,5 @@
-#N canvas 146 584 435 232 10;
-#N canvas 705 445 1208 468 controls 1;
+#N canvas 793 156 435 232 10;
+#N canvas 704 444 1208 468 controls 0;
 #X floatatom 97 179 5 0 0 0 global_bpm - -;
 #X obj 97 152 r \$0-tapBPM;
 #X obj 97 206 s \$0-bpm;
@@ -49,7 +49,7 @@
 #X obj 231 32 inlet;
 #X text 272 31 midi input;
 #X obj 639 42 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 15;
+-1 -1 12;
 #X obj 389 -1 gui/mpkMini;
 #X obj 412 92 gui/oneButtonTapMetro;
 #X obj 600 21 gui/mpkMini;
@@ -76,8 +76,8 @@
 #X obj 857 271 spigot;
 #X obj 907 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 713 250 prepend sampler;
-#N canvas 732 535 233 273 midi2plays 1;
+#X obj 688 288 prepend sampler;
+#N canvas 731 561 233 273 midi2plays 0;
 #X obj 34 253 outlet;
 #X obj 34 16 inlet;
 #X obj 34 226 midi/midi2play 1 36 multimelody;
@@ -107,8 +107,12 @@
 #X msg 442 149 sampler preset \$1;
 #X text 105 404 audio control output;
 #X obj 209 110 gui/sampler8-control;
-#X obj 816 198 == 14;
-#X obj 789 114 == 15;
+#X obj 210 139 gui/mixer8-control;
+#X obj 206 200 prepend sampler;
+#X msg 205 169 \$2 \$1 \$3;
+#X msg 754 261 \$2 \$1 \$3;
+#X obj 816 198 == 15;
+#X obj 789 114 != 15;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 6 0 7 0;
@@ -118,13 +122,13 @@
 #X connect 13 1 25 0;
 #X connect 14 0 25 0;
 #X connect 15 4 12 0;
-#X connect 15 4 33 0;
-#X connect 15 4 34 0;
+#X connect 15 4 37 0;
+#X connect 15 4 38 0;
 #X connect 16 3 17 0;
 #X connect 17 0 20 0;
 #X connect 17 0 22 0;
 #X connect 18 0 8 0;
-#X connect 19 0 24 0;
+#X connect 19 0 36 0;
 #X connect 20 0 19 0;
 #X connect 21 0 20 1;
 #X connect 22 0 18 0;
@@ -136,11 +140,15 @@
 #X connect 29 0 30 0;
 #X connect 30 0 8 0;
 #X connect 32 0 8 0;
-#X connect 33 0 23 0;
-#X connect 34 0 21 0;
+#X connect 33 0 35 0;
+#X connect 34 0 8 0;
+#X connect 35 0 34 0;
+#X connect 36 0 24 0;
+#X connect 37 0 23 0;
+#X connect 38 0 21 0;
 #X restore 174 10 pd controls;
 #X obj 174 -20 gui/mpkMini;
-#N canvas 1177 229 558 360 audio 1;
+#N canvas 1175 227 558 360 audio 0;
 #X obj 29 67 inlet;
 #X text 25 46 control;
 #X obj 31 277 dac~ 1 2;
