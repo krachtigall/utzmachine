@@ -1,4 +1,4 @@
-#N canvas 167 304 455 339 10;
+#N canvas 166 303 455 339 10;
 #X obj 125 -126 inlet;
 #X text 171 -126 midinote;
 #X text 196 164 play or stop;
@@ -12,7 +12,6 @@
 #X text 187 -66 daisy chaining;
 #X obj 125 -88 route note;
 #X obj 125 166 outlet;
-#X obj 259 146 print;
 #X obj 125 139 prepend \$3;
 #X msg 171 -21 note \$1 \$2;
 #X connect 0 0 11 0;
@@ -20,13 +19,12 @@
 #X connect 4 0 7 0;
 #X connect 4 1 6 0;
 #X connect 5 0 3 0;
-#X connect 5 1 15 0;
+#X connect 5 1 14 0;
 #X connect 6 0 9 0;
 #X connect 7 0 8 0;
-#X connect 8 0 14 0;
-#X connect 9 0 14 0;
+#X connect 8 0 13 0;
+#X connect 9 0 13 0;
 #X connect 11 0 5 0;
 #X connect 11 1 12 0;
+#X connect 13 0 12 0;
 #X connect 14 0 12 0;
-#X connect 14 0 13 0;
-#X connect 15 0 12 0;
