@@ -26,6 +26,8 @@
 #X obj 101 101 mixerX1;
 #X obj 275 101 mixerX1;
 #X obj 362 101 mixerX1;
+#X obj -227 -160 loadbang;
+#X msg -230 -125 volumes 1 1 1 1;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
 #X connect 2 0 8 0;
@@ -58,4 +60,6 @@
 #X connect 25 1 6 0;
 #X connect 26 0 1 1;
 #X connect 26 1 6 1;
+#X connect 27 0 28 0;
+#X connect 28 0 17 0;
 #X coords 0 -1 1 1 349 137 1 100 100;
