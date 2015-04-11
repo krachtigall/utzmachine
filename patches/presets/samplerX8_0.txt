@@ -1,4 +1,4 @@
-../samples/kick.wav ../samples/snare.wav
+../samples/mth_bd_freakshow.wav ../samples/snare.wav
 ../samples/hihat.wav ../samples/tom.wav
-../samples/fhg2_clap_disco04.wav ../samples/oh_clap_vinylclap1.wav
-../samples/ph_clap_southern.wav ../samples/Cowbell-808.aif;
+../samples/Cuckoo.wav ../samples/oh_clap_vinylclap1.wav
+../samples/ph_clap_southern.wav ../samples/lasergun.wav;
