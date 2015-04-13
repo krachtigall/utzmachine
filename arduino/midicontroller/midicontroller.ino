@@ -87,15 +87,15 @@ void loop() {
         if (g_ButtonCycle1[i] == HIGH)
         {
           noteOn(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
-          Serial.print("Note On:");
-          Serial.println(g_ButtonPins[i]);
+//          Serial.print("Note On:");
+//          Serial.println(g_ButtonPins[i]);
         }
         // send noteOff if note pressed
         else
         {
           noteOff(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
-          Serial.print("Note Off :");
-          Serial.println(g_ButtonPins[i]);
+//          Serial.print("Note Off :");
+//          Serial.println(g_ButtonPins[i]);
         }
 
         MIDIUSB.flush();
