@@ -1,2 +1,0 @@
-../samples/kick.wav ../samples/snare.wav
-../samples/hihat.wav ../samples/tom.wav;

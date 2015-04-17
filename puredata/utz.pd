@@ -1,19 +1,23 @@
-#N canvas 786 167 435 232 10;
-#N canvas 697 455 1208 468 controls 0;
+#N canvas 1 49 612 718 10;
+#N canvas 1 49 612 718 controls 0;
 #X floatatom 97 179 5 0 0 0 global_bpm - -;
 #X obj 97 152 r \$0-tapBPM;
 #X obj 97 206 s \$0-bpm;
-#N canvas 572 549 450 300 guts 0;
+#N canvas 1 49 612 718 guts 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
 #X msg 41 181 \; pd dsp \$1;
 #X obj 41 141 r $dspStatusOut;
-#X obj 41 84 s $dspStatusIn;
+#X obj 41 107 s $dspStatusIn;
 #X obj 14 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 41 81 delay 100;
+#X text 106 74 // hack to prevent switching on dsp // before soundcard
+is acquired;
 #X connect 0 0 1 0;
-#X connect 1 0 4 0;
+#X connect 1 0 6 0;
 #X connect 3 0 2 0;
+#X connect 6 0 4 0;
 #X restore 29 252 pd guts;
 #X obj 48 16 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -149,7 +153,7 @@
 #X connect 40 0 32 0;
 #X restore 174 10 pd controls;
 #X obj 174 -20 gui/mpkMini;
-#N canvas 1173 231 558 360 audio 0;
+#N canvas 1 49 612 718 audio 0;
 #X obj 29 67 inlet;
 #X text 25 46 control;
 #X obj 31 277 dac~ 1 2;
