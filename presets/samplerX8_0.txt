@@ -1,4 +1,4 @@
-../../samples/_/mth_bd_freakshow.wav ../../samples/_/snare.wav
-../../samples/_/hihat.wav ../../samples/_/tom.wav
-../../samples/_/Cuckoo.wav ../../samples/_/oh_clap_vinylclap1.wav
-../../samples/_/ph_clap_southern.wav ../../samples/_/lasergun.wav;
+_/mth_bd_freakshow.wav _/snare.wav
+_/hihat.wav _/tom.wav
+_/Cuckoo.wav _/oh_clap_vinylclap1.wav
+_/ph_clap_southern.wav _/lasergun.wav;
