@@ -1,9 +1,9 @@
-#N canvas 707 149 612 718 10;
-#N canvas 324 130 1176 718 controls 0;
+#N canvas 706 148 612 718 10;
+#N canvas 322 128 1176 718 controls 0;
 #X floatatom 97 179 5 0 0 0 global_bpm - -;
 #X obj 97 152 r \$0-tapBPM;
 #X obj 97 206 s \$0-bpm;
-#N canvas 1 49 612 718 guts 0;
+#N canvas 2 87 612 718 guts 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
 #X msg 41 181 \; pd dsp \$1;
@@ -27,7 +27,7 @@ is acquired;
 -1;
 #X obj 96 108 s \$0-stop;
 #X obj 118 385 outlet;
-#N canvas 217 288 561 388 init 0;
+#N canvas 746 377 561 388 init 0;
 #X obj 61 78 loadbang;
 #X msg 19 113 multimelody start;
 #X msg 138 113 1 volume 0.7 \, 2 volume 0.7 \, 3 volume 0.7 \, 4 volume
@@ -40,7 +40,6 @@ is acquired;
 #X obj 138 166 cyclone/prepend mixer;
 #X obj 200 219 cyclone/prepend sampler;
 #X connect 0 0 1 0;
-#X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 6 0;
 #X connect 6 0 3 0;
@@ -50,7 +49,7 @@ is acquired;
 #X obj 231 32 inlet;
 #X text 272 31 midi input;
 #X obj 788 79 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 389 -1 gui/mpkMini;
 #X obj 412 92 gui/oneButtonTapMetro;
 #X obj 676 21 gui/mpkMini;

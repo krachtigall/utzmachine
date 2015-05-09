@@ -1,4 +1,4 @@
-#N canvas 1 49 612 718 10;
+#N canvas 2 87 612 718 10;
 #X obj 147 460 outlet~;
 #X obj 64 51 inlet;
 #N canvas 1 49 612 718 presets 0;
@@ -269,19 +269,12 @@ by dr/2013 cornicis/2014;
 #X connect 28 0 30 0;
 #X connect 29 0 30 0;
 #X restore -7 119 pd controls;
-#N canvas 1 49 612 718 init 0;
-#X obj 139 165 outlet;
+#N canvas 2 87 612 718 init 1;
+#X obj 131 157 outlet;
 #X obj 133 53 loadbang;
-#X obj 133 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 113 91 preset 0;
-#X msg 53 120 volume 1 1 \, volume 2 1 \, volume 3 1 \, volume 4 1
-\, volume 5 1 \, volume 6 1 \, volume 7 1 \, volume 8 1;
-#X obj 61 31 inlet;
-#X connect 1 0 3 0;
-#X connect 1 0 4 0;
-#X connect 3 0 0 0;
-#X connect 4 0 0 0;
+#X msg 136 111 preset 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
 #X restore -8 97 pd init;
 #N canvas 1 49 612 718 audio 0;
 #X obj 81 174 mixerX8 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
