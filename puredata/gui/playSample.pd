@@ -1,4 +1,4 @@
-#N canvas 986 174 667 356 10;
+#N canvas 985 173 667 356 10;
 #X obj 264 85 readsf~ 2;
 #X msg 398 47 open \$1;
 #X obj 398 -6 symbol;
@@ -59,13 +59,13 @@
 #X text 440 109 release;
 #X obj 264 -63 t a b b;
 #X obj 312 1 t b b;
-#X obj 312 24 delay 10;
 #X obj 387 -85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 382 -70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 369 92 1 1;
-#X msg 408 110 0 5;
+#X obj 312 24 delay 7;
+#X msg 408 110 0 7;
 #X connect 0 0 33 0;
 #X connect 0 1 34 0;
 #X connect 1 0 0 0;
@@ -96,13 +96,13 @@
 #X connect 33 0 21 0;
 #X connect 34 0 22 0;
 #X connect 37 0 19 0;
-#X connect 37 1 42 0;
+#X connect 37 1 41 0;
 #X connect 37 2 2 0;
-#X connect 38 0 39 0;
+#X connect 38 0 42 0;
 #X connect 38 1 43 0;
-#X connect 39 0 20 0;
-#X connect 40 0 37 0;
-#X connect 41 0 38 0;
-#X connect 42 0 32 0;
+#X connect 39 0 37 0;
+#X connect 40 0 38 0;
+#X connect 41 0 32 0;
+#X connect 42 0 20 0;
 #X connect 43 0 32 0;
 #X coords 0 356 1 355 330 30 0;
