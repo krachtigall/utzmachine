@@ -1,12 +1,12 @@
-#define g_NumberOfButtons      9    // number of used buttons
+#define g_NumberOfButtons     11    // number of used buttons
 #define g_MidiChannel          1    // midi channel
 #define g_NoteVelocity        64    // velocity for note on messages
 #define g_DebounceDelay      500    // delay in microseconds
 
 // used pins
-byte g_ButtonPins[g_NumberOfButtons] = {4, 5, 6, 7, 8, 9, 10, 11, 12};
+byte g_ButtonPins[g_NumberOfButtons] = {5, 6, 7, 8, 9, 10, 11, 12, 2, 3, 4};
 // note mapping to respective pin
-byte g_MidiNotes[g_NumberOfButtons] = { 44, 45, 46, 47, 48, 49, 50, 51, 36};
+byte g_MidiNotes[g_NumberOfButtons] = { 44, 45, 46, 47, 48, 49, 50, 51, 36, 37, 38};
 
 // valid button states
 bool g_ButtonStates[g_NumberOfButtons];
