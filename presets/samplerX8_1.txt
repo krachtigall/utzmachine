@@ -1,4 +1,4 @@
-../samples/kick.wav ../samples/snare.wav ../samples/hihat.wav ../samples/tom.wav
-../samples/fhg2_clap_disco04.wav ../samples/oh_clap_vinylclap1.wav
-../samples/ph_clap_southern.wav /mnt/data/music/moviesamples/hahahahahaAusWatchmen-e07.wav
-;
+bassdrum/TR-909.wav snare/Snare-808-Tone1.wav
+percussion/Maracas-808.wav percussion/clap_disco.wav
+animal/cuckoo.wav horns/bikeHorn.wav
+bass/ToneyBassGb1.wav guns/lasergun.wav;
