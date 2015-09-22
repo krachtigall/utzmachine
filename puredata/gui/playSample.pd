@@ -1,4 +1,4 @@
-#N canvas 154 133 1056 549 10;
+#N canvas 152 131 1056 549 10;
 #X obj 264 338 readsf~ 2;
 #X msg 398 240 open \$1;
 #X obj 398 187 symbol;
@@ -77,6 +77,7 @@
 #X obj 400 418 mod 2;
 #X obj 290 268 r \$0-envelope-set;
 #X obj 284 303 spigot;
+#X obj 603 372 print teeeest;
 #X connect 0 0 31 0;
 #X connect 0 1 32 0;
 #X connect 1 0 0 0;
@@ -92,6 +93,7 @@
 #X connect 16 0 36 0;
 #X connect 17 0 2 0;
 #X connect 17 0 26 0;
+#X connect 17 0 55 0;
 #X connect 18 0 8 0;
 #X connect 19 0 0 0;
 #X connect 20 0 54 0;
