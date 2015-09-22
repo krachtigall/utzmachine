@@ -1,12 +1,12 @@
-#define g_NumberOfButtons      9    // number of used buttons
+#define g_NumberOfButtons     11    // number of used buttons
 #define g_MidiChannel          1    // midi channel
 #define g_NoteVelocity        64    // velocity for note on messages
 #define g_DebounceDelay      500    // delay in microseconds
 
 // used pins
-byte g_ButtonPins[g_NumberOfButtons] = {4, 5, 6, 7, 8, 9, 10, 11, 12};
+byte g_ButtonPins[g_NumberOfButtons] = {5, 6, 7, 8, 9, 10, 11, 12, 2, 3, 4};
 // note mapping to respective pin
-byte g_MidiNotes[g_NumberOfButtons] = { 44, 45, 46, 47, 48, 49, 50, 51, 36};
+byte g_MidiNotes[g_NumberOfButtons] = { 44, 45, 46, 47, 48, 49, 50, 51, 36, 37, 38};
 
 // valid button states
 bool g_ButtonStates[g_NumberOfButtons];
@@ -14,6 +14,12 @@ bool g_ButtonStates[g_NumberOfButtons];
 bool g_ButtonCycle1[g_NumberOfButtons];
 // second debounce cycle values
 bool g_ButtonCycle2[g_NumberOfButtons];
+
+// program change
+int g_Program = 0;
+int g_ProgUp = 2;
+int g_ProgDown = 3;
+int g_ProgMax = 128;
 
 // output pin for status led
 int led = 13;
@@ -41,6 +47,11 @@ void noteOff(byte channel, byte pitch, byte velocity) {
 
 void controlChange(byte channel, byte control, byte value) {
   MIDIEvent event = {0x0B, 0xB0 | channel, control, value};
+  MIDIUSB.write(event);
+}
+
+void programChange(byte channel, byte value) {
+  MIDIEvent event = {0x0C, 0xC0 | channel, value, 0};
   MIDIUSB.write(event);
 }
 
@@ -83,19 +94,46 @@ void loop() {
       // check transition
       if (g_ButtonCycle1[i] != g_ButtonStates[i])
       {
-        // send noteOn if pressed
         if (g_ButtonCycle1[i] == HIGH)
-        {
-          noteOn(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
-//          Serial.print("Note On:");
-//          Serial.println(g_ButtonPins[i]);
+        {  // button has been pressed
+          if (g_ButtonPins[i] == g_ProgUp || g_ButtonPins[i] == g_ProgDown)
+          {  // send Program change
+            if (g_ButtonPins[i] == g_ProgUp)
+            {  // increment program and stay in bounds
+              g_Program = (g_Program + 1) % g_ProgMax;
+            }
+            else
+            {  // decrement program and stay in bounds
+              if (g_Program == 0)
+              {
+                g_Program = g_ProgMax - 1;
+              }
+              else
+              {
+                g_Program = (g_Program - 1) % g_ProgMax;
+              }
+            }
+            
+            //progChange(g_MidiChannel, g_Program);
+            controlChange(g_MidiChannel, 1, g_Program);
+            Serial.print("ProgramChange:");
+            Serial.println(g_Program);
+          }
+          else
+          {  // send note on
+            noteOn(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
+            Serial.print("Note On:");
+            Serial.println(g_ButtonPins[i]);
+          }
         }
-        // send noteOff if note pressed
         else
-        {
-          noteOff(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
-//          Serial.print("Note Off :");
-//          Serial.println(g_ButtonPins[i]);
+        { // button has been released
+          if (!(g_ButtonPins[i] == g_ProgUp || g_ButtonPins[i] == g_ProgDown))
+          {  // send note off if no program change
+            noteOff(g_MidiChannel, g_MidiNotes[i], g_NoteVelocity);
+            Serial.print("Note Off :");
+            Serial.println(g_ButtonPins[i]);
+          }
         }
 
         MIDIUSB.flush();
@@ -127,5 +165,3 @@ void loop() {
   }
   
 }
-
-

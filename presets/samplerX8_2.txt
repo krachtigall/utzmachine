@@ -1,4 +1,4 @@
-../samples/mth_bd_freakshow.wav ../samples/snare.wav
-../samples/hihat.wav ../samples/tom.wav
-../samples/Cuckoo.wav ../samples/oh_clap_vinylclap1.wav
-../samples/ph_clap_southern.wav ../samples/lasergun.wav;
+bassdrum/kick.wav snare/Materials2.wav
+percussion/Shake-CabasaShort.wav percussion/Clave-808.wav
+animal/dolphin.wav horns/fogHorn.wav
+gizmo/sawing.wav gizmo/ChainSaw.wav;

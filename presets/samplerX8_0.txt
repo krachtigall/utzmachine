@@ -1,4 +1,4 @@
-../../samples/_/mth_bd_freakshow.wav ../../samples/_/snare.wav
-../../samples/_/hihat.wav ../../samples/_/tom.wav
-../../samples/_/Cuckoo.wav ../../samples/_/oh_clap_vinylclap1.wav
-../../samples/_/ph_clap_southern.wav ../../samples/_/lasergun.wav;
+bassdrum/707.wav snare/snare.wav
+hihat/hihat.wav percussion/Clap-808.wav
+animal/donkey.wav horns/brassHorn.wav
+gizmo/toilet.wav guns/shotgun.wav;
