@@ -1,4 +1,4 @@
-#N canvas 681 87 681 454 10;
+#N canvas 680 87 681 454 10;
 #X obj 147 196 outlet~;
 #X obj 64 -213 inlet;
 #N canvas 2 87 853 718 presets 0;
@@ -204,71 +204,6 @@ by dr/2013 cornicis/2014;
 #X connect 30 0 18 0;
 #X connect 31 0 19 0;
 #X restore 63 96 pd parameters;
-#N canvas 2 87 787 401 controls 0;
-#X obj 41 25 cnv 15 690 160 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X obj 55 38 bng 56 250 50 0 \$0-b1-out \$0-b1-in 1 20 30 0 20 -262144
--1 -1;
-#X obj 143 38 bng 56 250 50 0 \$0-b2-out \$0-b2-in 2 20 30 0 20 -262144
--1 -1;
-#X obj 231 38 bng 56 250 50 0 \$0-b3-out \$0-b3-in 3 20 30 0 20 -262144
--1 -1;
-#X obj 316 38 bng 56 250 50 0 \$0-b4-out \$0-b4-in 4 20 30 0 20 -262144
--1 -1;
-#X obj 55 113 hradio 36 1 0 15 \$0-preset-nr-out \$0-preset-nr-in preset_bank
-0 -8 0 10 -262144 -1 -1 0;
-#X obj 681 113 bng 36 250 50 0 \$0-safe-bang empty safe 5 17 0 10 -262144
--1 -1;
-#X obj 631 113 bng 36 250 50 0 \$0-load-bang-out \$0-load-bang-in load
-5 17 0 10 -262144 -1 -1;
-#X obj 401 38 bng 56 250 50 0 \$0-b5-out \$0-b5-in 5 20 30 0 20 -262144
--1 -1;
-#X obj 492 38 bng 56 250 50 0 \$0-b6-out \$0-b6-in 6 20 30 0 20 -262144
--1 -1;
-#X obj 575 38 bng 56 250 50 0 \$0-b7-out \$0-b7-in 7 20 30 0 20 -262144
--1 -1;
-#X obj 661 38 bng 56 250 50 0 \$0-b8-out \$0-b8-in 8 20 30 0 20 -262144
--1 -1;
-#X obj 55 160 bng 15 250 50 0 empty empty stop_all 17 7 0 10 -262144
--1 -1;
-#X msg 55 225 stop 1 \, stop 2 \, stop 3 \, stop 4 \, stop 5 \, stop
-6 \, stop 7 \, stop8;
-#X obj 389 267 r \$0-b5-out;
-#X obj 69 267 r \$0-b1-out;
-#X obj 149 267 r \$0-b2-out;
-#X obj 229 267 r \$0-b3-out;
-#X obj 309 267 r \$0-b4-out;
-#X obj 469 267 r \$0-b6-out;
-#X obj 549 267 r \$0-b7-out;
-#X obj 629 267 r \$0-b8-out;
-#X msg 69 287 start 1;
-#X msg 149 287 start 2;
-#X msg 229 287 start 3;
-#X msg 309 287 start 4;
-#X msg 389 287 start 5;
-#X msg 469 287 start 6;
-#X msg 549 287 start 7;
-#X msg 629 287 start 8;
-#X obj 55 350 outlet;
-#X connect 12 0 13 0;
-#X connect 13 0 30 0;
-#X connect 14 0 26 0;
-#X connect 15 0 22 0;
-#X connect 16 0 23 0;
-#X connect 17 0 24 0;
-#X connect 18 0 25 0;
-#X connect 19 0 27 0;
-#X connect 20 0 28 0;
-#X connect 21 0 29 0;
-#X connect 22 0 30 0;
-#X connect 23 0 30 0;
-#X connect 24 0 30 0;
-#X connect 25 0 30 0;
-#X connect 26 0 30 0;
-#X connect 27 0 30 0;
-#X connect 28 0 30 0;
-#X connect 29 0 30 0;
-#X restore -7 -145 pd controls;
 #N canvas 2 87 863 310 audio 0;
 #X obj 81 174 mixerX8 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _;
@@ -342,5 +277,4 @@ _ _ _;
 #X connect 12 0 7 0;
 #X connect 17 0 0 0;
 #X connect 18 0 16 0;
-#X connect 20 0 11 0;
 #X coords 0 454 1 453 690 140 0;
