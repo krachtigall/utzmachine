@@ -1,4 +1,4 @@
-#N canvas 818 159 1084 914 10;
+#N canvas 817 158 1084 914 10;
 #X obj 196 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 196 162 metro;
@@ -28,14 +28,14 @@
 #X msg 43 81 stop;
 #X obj 43 106 s stop;
 #X obj 196 78 r start;
-#X floatatom 318 64 9 0 0 0 - - -;
-#X obj 318 -37 r start;
-#X obj 448 37 loadbang;
-#X obj 261 11 r stop;
-#X text 240 62 current time;
-#X obj 318 -14 t b b;
-#X obj 318 98 moses;
-#X obj 345 123 s end;
+#X floatatom 383 -5 9 0 0 0 - - -;
+#X obj 383 -106 r start;
+#X obj 513 -32 loadbang;
+#X obj 326 -58 r stop;
+#X text 305 -7 current time;
+#X obj 383 -83 t b b;
+#X obj 383 29 moses;
+#X obj 410 82 s end;
 #X obj 42 49 r end;
 #X text 182 -14 mute;
 #X obj 411 647 +~;
@@ -53,18 +53,18 @@
 #X obj 1003 501 r amplitude;
 #X obj 7 1 del 60000;
 #X obj 33 25 loadbang;
-#X obj 318 33 ../utls/stopWatch;
+#X obj 383 -36 ../utls/stopWatch;
 #X obj 583 207 ../utls/randomPitchAndLengthOscillator;
-#X text 477 63 track length seconds;
-#X msg 417 3 100;
+#X text 542 -6 track length seconds;
+#X msg 482 -66 100;
 #X obj 504 221 r start;
 #X msg 502 244 1;
 #X msg 265 145 500;
-#X obj 446 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 268 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 448 60 3;
+#X obj 511 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 333 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 513 -9 3;
 #X obj 583 363 ../utls/randomPitchAndLengthOscillator;
 #X obj 583 518 ../utls/randomPitchAndLengthOscillator;
 #X obj -44 -125 inlet;
@@ -75,6 +75,7 @@
 #X obj 615 728 outlet;
 #X obj 613 694 r \$0-ctrl-out;
 #X msg 111 7 0.2;
+#X text 404 55 !!! automatic ending disabled;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -101,7 +102,6 @@
 #X connect 28 0 48 0;
 #X connect 28 1 51 0;
 #X connect 29 0 56 0;
-#X connect 29 1 30 0;
 #X connect 29 1 55 0;
 #X connect 31 0 18 0;
 #X connect 33 0 34 1;
