@@ -1,4 +1,4 @@
-#N canvas 817 158 1084 914 10;
+#N canvas 815 156 1084 914 10;
 #X obj 196 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 196 162 metro;
@@ -67,15 +67,19 @@
 #X msg 513 -9 3;
 #X obj 583 363 ../utls/randomPitchAndLengthOscillator;
 #X obj 583 518 ../utls/randomPitchAndLengthOscillator;
-#X obj -44 -125 inlet;
 #X obj -53 -77 route bang start stop;
-#X obj 510 723 outlet~;
+#X obj 507 744 outlet~;
 #X obj 59 -104 route multimelody;
 #X obj 158 -76 s \$0-ctrl-out;
 #X obj 615 728 outlet;
 #X obj 613 694 r \$0-ctrl-out;
 #X msg 111 7 0.2;
 #X text 404 55 !!! automatic ending disabled;
+#X obj 421 698 throw~ \$0-out;
+#X obj -47 184 inlet~;
+#X obj -48 222 throw~ \$0-out;
+#X obj 11 -119 inlet;
+#X obj 516 710 catch~ \$0-out;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -87,7 +91,7 @@
 #X connect 6 0 46 0;
 #X connect 8 0 11 0;
 #X connect 9 0 10 0;
-#X connect 10 0 67 0;
+#X connect 10 0 66 0;
 #X connect 11 0 13 0;
 #X connect 13 0 14 0;
 #X connect 14 0 12 0;
@@ -107,7 +111,7 @@
 #X connect 33 0 34 1;
 #X connect 34 0 35 0;
 #X connect 34 0 35 1;
-#X connect 34 0 62 0;
+#X connect 34 0 68 0;
 #X connect 36 0 35 0;
 #X connect 37 0 35 0;
 #X connect 38 0 35 0;
@@ -131,11 +135,13 @@
 #X connect 57 0 29 1;
 #X connect 58 0 33 0;
 #X connect 59 0 33 1;
-#X connect 60 0 63 0;
-#X connect 61 0 6 0;
-#X connect 61 1 6 0;
-#X connect 61 2 18 0;
-#X connect 63 0 61 0;
-#X connect 63 1 64 0;
-#X connect 66 0 65 0;
-#X connect 67 0 14 0;
+#X connect 60 0 6 0;
+#X connect 60 1 6 0;
+#X connect 60 2 18 0;
+#X connect 62 0 60 0;
+#X connect 62 1 63 0;
+#X connect 65 0 64 0;
+#X connect 66 0 14 0;
+#X connect 69 0 70 0;
+#X connect 71 0 62 0;
+#X connect 72 0 61 0;
