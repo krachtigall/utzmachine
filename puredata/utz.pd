@@ -1,4 +1,4 @@
-#N canvas 568 257 445 313 10;
+#N canvas 567 256 445 313 10;
 #N canvas 1115 181 463 323 audio 0;
 #X obj 29 230 cmpstn/multiMelody;
 #X text 82 16 control messages;
@@ -85,7 +85,7 @@
 #X msg 465 99 \$2 \$1 \$3;
 #X obj 466 130 cyclone/prepend sampler;
 #X obj 637 -15 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 8;
+-1 -1 0;
 #X msg 636 19 preset \$1;
 #N canvas 751 481 450 300 sampler 0;
 #X obj 89 -139 outlet;
@@ -113,7 +113,7 @@
 #X connect 17 0 0 0;
 #X connect 18 0 0 0;
 #X restore 44 99 pd UI;
-#N canvas 1024 264 462 262 MIDI 0;
+#N canvas 1023 263 462 262 MIDI 0;
 #X obj 48 165 outlet;
 #X text 35 184 audio control output;
 #X obj 48 55 inlet;
@@ -129,23 +129,23 @@
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
 #X restore 88 108 pd pgm2preset;
-#N canvas 1369 165 450 300 note2inst 0;
+#N canvas 1368 164 450 300 note2inst 0;
 #X obj 28 208 outlet;
 #X obj 81 136 gui/oneButtonTapMetro;
-#N canvas 727 644 233 273 midi2plays 0;
+#N canvas 726 670 233 273 midi2plays 0;
 #X obj 34 253 outlet;
 #X obj 34 16 inlet;
-#X obj 34 226 midi/midi2play 1 36 multimelody;
-#X obj 34 56 midi/midi2play 1 44 sampler;
-#X obj 34 76 midi/midi2play 2 45 sampler;
-#X obj 34 96 midi/midi2play 3 46 sampler;
-#X obj 34 116 midi/midi2play 4 47 sampler;
-#X obj 34 136 midi/midi2play 5 48 sampler;
-#X obj 34 156 midi/midi2play 6 49 sampler;
-#X obj 34 176 midi/midi2play 7 50 sampler;
-#X obj 34 196 midi/midi2play 8 51 sampler;
-#X connect 1 0 3 0;
-#X connect 2 0 0 0;
+#X obj 34 56 midi/midi2play s1 44;
+#X obj 34 76 midi/midi2play s2 45;
+#X obj 34 96 midi/midi2play s3 46;
+#X obj 34 116 midi/midi2play s4 47;
+#X obj 34 136 midi/midi2play s5 48;
+#X obj 34 156 midi/midi2play s6 49;
+#X obj 34 176 midi/midi2play s7 50;
+#X obj 34 196 midi/midi2play s8 51;
+#X obj 34 226 midi/midi2play multimelody 36;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
@@ -153,7 +153,7 @@
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
-#X connect 10 0 2 0;
+#X connect 10 0 0 0;
 #X restore 28 180 pd midi2plays;
 #X obj 28 36 notein;
 #X obj 28 64 pack f f;
@@ -196,7 +196,7 @@
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X restore 44 61 pd MIDI;
-#N canvas 130 355 433 300 init 0;
+#N canvas 129 354 433 300 init 0;
 #N canvas 2 87 497 268 dsp 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
@@ -240,18 +240,14 @@ is acquired;
 #X connect 5 0 6 0;
 #X connect 6 0 2 0;
 #X restore 45 77 pd multimelody;
-#N canvas 1125 288 561 388 sampler 0;
+#N canvas 1124 287 561 388 sampler 0;
 #X obj 58 78 loadbang;
-#X obj 58 176 cyclone/prepend mixer;
-#X obj 58 201 cyclone/prepend sampler;
-#X msg 58 123 1 volume 0.707 \, 2 volume 0.7 \, 3 volume 0.613 \, 4
-volume 0.487 \, 5 volume 0.952 \, 6 volume 0.4 \, 7 volume 0.7 \, 8
-volume 0.597 \, master volume 1;
-#X obj 58 260 outlet;
-#X connect 0 0 3 0;
+#X msg 58 123 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597 \, master volume 1;
+#X obj 58 175 outlet;
+#X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 2 0 4 0;
-#X connect 3 0 1 0;
 #X restore 55 97 pd sampler;
 #N canvas 264 492 450 300 preset 0;
 #X obj 68 50 loadbang;
