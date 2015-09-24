@@ -1,4 +1,4 @@
-#N canvas 537 215 445 377 10;
+#N canvas 536 214 445 377 10;
 #N canvas 1110 176 463 353 audio 0;
 #X obj 29 64 cmpstn/multiMelody;
 #X text 130 16 control messages;
@@ -66,7 +66,7 @@
 #X connect 14 0 1 0;
 #X restore 44 284 pd master;
 #X obj 44 312 print dropped;
-#N canvas 904 194 965 682 UI 0;
+#N canvas 903 193 965 682 UI 0;
 #X obj 111 191 outlet control;
 #X obj 46 -7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -191,7 +191,7 @@
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X restore 44 81 pd MIDI;
-#N canvas 129 354 433 300 init 0;
+#N canvas 128 353 433 300 init 0;
 #N canvas 2 87 497 268 dsp 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
@@ -207,7 +207,7 @@ is acquired;
 #X connect 5 0 4 0;
 #X restore 25 37 pd dsp;
 #X obj 25 184 outlet;
-#N canvas 636 591 450 300 master 0;
+#N canvas 634 589 450 300 master 0;
 #X obj 32 63 loadbang;
 #X msg 132 115 master volume 1;
 #X msg 32 115 master mute 0;
@@ -217,7 +217,7 @@ is acquired;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
 #X restore 35 57 pd master;
-#N canvas 1121 284 487 222 multimelody 0;
+#N canvas 1120 283 487 222 multimelody 0;
 #X obj 61 18 loadbang;
 #X msg 61 106 multimelody start;
 #X obj 61 149 outlet;
@@ -235,16 +235,7 @@ is acquired;
 #X connect 5 0 6 0;
 #X connect 6 0 2 0;
 #X restore 45 77 pd multimelody;
-#N canvas 1124 287 561 388 sampler 0;
-#X obj 58 78 loadbang;
-#X msg 58 123 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
-s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
-\, s8 volume 0.597 \, master volume 1;
-#X obj 58 175 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X restore 55 97 pd sampler;
-#N canvas 264 492 450 300 preset 0;
+#N canvas 263 491 450 300 preset 0;
 #X obj 68 50 loadbang;
 #X obj 68 134 outlet;
 #X msg 68 91 preset 0;
@@ -254,12 +245,11 @@ s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
-#X connect 5 0 1 0;
 #X restore 44 13 pd init;
 #X obj 130 30 print ctrl-init;
 #X obj 130 126 print ctrl-ui;
 #X obj 130 98 print ctrl-midi;
-#N canvas 1276 174 450 300 preset 0;
+#N canvas 1275 173 450 300 preset 0;
 #X obj 52 34 inlet;
 #X obj 121 242 outlet;
 #X obj 52 128 %;
@@ -271,7 +261,7 @@ s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
 #X obj 52 186 s \$0-preset-set;
 #X obj 52 156 abs;
 #X text 80 155 preset number is positive;
-#N canvas 652 185 1117 769 sampler 0;
+#N canvas 651 184 1117 769 sampler 0;
 #X obj 37 144 textfile;
 #X msg 37 116 rewind;
 #X obj 18 88 until;
@@ -307,13 +297,13 @@ by dr/2013 cornicis/2014;
 #X obj 872 278 expr if ($f1 > 8 \, 0 \, $f1) \;;
 #X obj 577 153 r \$0-dump-set;
 #X obj 769 299 cyclone/gate 8;
-#X msg 147 108 read ../presets/samplerX8_3.txt;
-#X msg 189 329 write ../presets/samplerX8_3.txt;
+#X msg 147 108 read ../presets/samplerX8_0.txt;
+#X msg 189 329 write ../presets/samplerX8_0.txt;
 #X obj 151 172 print read samples;
 #X obj 42 310 outlet;
 #X obj 217 144 print presetfile;
 #X msg 146 59 set read ../presets/samplerX8_\$1.txt;
-#N canvas 633 177 722 497 sendfiles 0;
+#N canvas 631 175 722 497 sendfiles 0;
 #X obj -370 -231 unpack s s s s s s s s;
 #X obj -413 36 outlet;
 #X obj -370 -259 inlet;
@@ -358,10 +348,10 @@ by dr/2013 cornicis/2014;
 #X connect 16 0 8 0;
 #X connect 17 0 9 0;
 #X connect 18 0 10 0;
-#X restore 42 282 pd sendfiles;
+#X restore 43 231 pd sendfiles;
 #X msg 189 242 set write ../presets/samplerX8_\$1.txt;
 #X text 753 118 here comes the loaded filename;
-#N canvas 97 558 696 469 envelope 0;
+#N canvas 96 557 696 469 envelope 0;
 #X text 163 -6 envelope settings;
 #X obj 17 -36 r \$0-preset-set;
 #X obj 17 -8 route 0 1 2 3 4 5 6 7;
@@ -415,7 +405,63 @@ envelope 1;
 #X connect 17 0 11 0;
 #X connect 18 0 11 0;
 #X connect 19 0 11 0;
-#X restore 70 233 pd envelope;
+#X restore 101 286 pd envelope;
+#N canvas 1121 284 645 478 volumes 0;
+#X text 173 4 envelope settings;
+#X obj 27 -26 r \$0-preset-set;
+#X obj 27 2 route 0 1 2 3 4 5 6 7;
+#X text 393 386 preset 0;
+#X text 413 336 preset 1;
+#X text 423 286 preset 2;
+#X text 433 236 preset 3;
+#X text 453 186 preset 4;
+#X text 464 136 preset 5;
+#X text 483 85 preset 6;
+#X text 503 36 preset 7;
+#X obj 27 431 outlet;
+#X msg 134 30 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 119 80 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 103 130 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613
+\, s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume
+0.7 \, s8 volume 0.597;
+#X msg 88 180 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 73 230 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 57 280 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 42 330 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X msg 27 380 s1 volume 0.707 \, s2 volume 0.7 \, s3 volume 0.613 \,
+s4 volume 0.487 \, s5 volume 0.952 \, s6 volume 0.4 \, s7 volume 0.7
+\, s8 volume 0.597;
+#X connect 1 0 2 0;
+#X connect 2 0 19 0;
+#X connect 2 1 18 0;
+#X connect 2 2 17 0;
+#X connect 2 3 16 0;
+#X connect 2 4 15 0;
+#X connect 2 5 14 0;
+#X connect 2 6 13 0;
+#X connect 2 7 12 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 0;
+#X connect 18 0 11 0;
+#X connect 19 0 11 0;
+#X restore 92 263 pd volumes;
+#X text 49 205 8 x filename from txt-file;
 #X connect 0 0 36 0;
 #X connect 0 0 40 0;
 #X connect 0 1 2 1;
@@ -486,6 +532,7 @@ envelope 1;
 #X connect 40 0 37 0;
 #X connect 41 0 35 0;
 #X connect 43 0 37 0;
+#X connect 44 0 37 0;
 #X restore 280 136 pd sampler;
 #X connect 0 0 6 0;
 #X connect 2 0 9 0;
