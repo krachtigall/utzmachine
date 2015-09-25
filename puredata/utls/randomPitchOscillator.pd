@@ -1,4 +1,4 @@
-#N canvas 520 354 540 601 10;
+#N canvas 517 351 540 601 10;
 #X obj 19 366 osc~;
 #X obj 10 316 randomRange;
 #X floatatom -21 367 5 0 0 0 - - -;
@@ -21,9 +21,9 @@
 #X obj 83 186 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1000.03 256;
 #X obj 136 215 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X obj 83 216 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.5 256;
+-262144 -1 -1 0 256;
 #X obj 71 18 inlet;
 #X text 69 1 trigger;
 #X obj 83 126 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -40,15 +40,15 @@
 #X floatatom 464 38 5 0 0 0 - - -;
 #X text 411 2 muter;
 #X obj 136 156 hsl 128 15 30 2000 1 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1421 1;
 #X obj 83 156 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 48.0006 256;
 #X obj 197 -82 loadbang;
 #X msg 277 18 1000;
 #X msg 372 17 0.5;
 #X msg 462 11 1;
 #X msg 174 19 40;
-#X obj 20 404 gate~;
+#X obj 20 404 *~;
 #X connect 0 0 39 0;
 #X connect 1 0 0 0;
 #X connect 1 0 2 0;
