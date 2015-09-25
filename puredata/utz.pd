@@ -1,5 +1,5 @@
-#N canvas 524 202 445 377 10;
-#N canvas 1104 170 463 353 audio 0;
+#N canvas 521 199 445 377 10;
+#N canvas 1100 166 463 353 audio 0;
 #X obj 29 64 cmpstn/multiMelody;
 #X text 130 16 control messages;
 #X obj 134 37 inlet control;
