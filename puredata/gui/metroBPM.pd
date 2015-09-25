@@ -1,5 +1,5 @@
-#N canvas 878 250 792 552 10;
-#N canvas 385 130 739 834 guts 1;
+#N canvas 877 249 792 552 10;
+#N canvas 384 129 739 834 guts 0;
 #X obj 52 -3 r \$0-bpm;
 #X obj 38 167 s \$0-tick;
 #X obj 283 40 r \$0-tick;
