@@ -1,4 +1,4 @@
-kick/80sElectro.wav snare/80sElectro2.wav
+kick/TurntableA2.wav snare/80sElectro2.wav
 tambourine/Trifecta.wav tom/MidTom80sElectro.wav
 animal/crow.wav voice/houston.wav
 percussion/Tom-808-Hi.wav fx/PotHit12(FX).wav;
