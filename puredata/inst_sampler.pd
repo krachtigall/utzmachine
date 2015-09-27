@@ -1,4 +1,4 @@
-#N canvas 632 425 518 480 10;
+#N canvas 629 422 518 480 10;
 #X obj 229 152 outlet;
 #X obj 109 -160 s \$0-ctrl-out;
 #X obj 229 125 r \$0-ctrl-out;
@@ -6,7 +6,7 @@
 #X text 76 -129 get parameters;
 #X text 72 26 forward unhandled input;
 #X obj 64 154 outlet~;
-#N canvas 993 336 683 590 audio 0;
+#N canvas 991 334 683 590 audio 0;
 #X obj 175 88 readsf~ 2;
 #X msg 45 71 open \$1;
 #X obj 45 43 symbol;
@@ -84,17 +84,9 @@
 #X obj 64 -89 utls/param \$0 \$1 start;
 #X obj 64 -69 utls/param \$0 \$1 stop;
 #X obj 64 -49 utls/param \$0 \$1 volume;
-#X obj 295 -131 r \$0-file-set;
-#X obj 295 -71 r \$0-volume-set;
-#X obj 289 -10 r \$0-envelope-set;
-#X floatatom 299 -40 5 0 0 0 - - -;
-#X floatatom 296 26 5 0 0 0 - - -;
 #X obj 64 -9 utls/param \$0 \$1 envelope;
 #X obj 64 -29 utls/param \$0 \$1 mute;
-#X floatatom 346 56 5 0 0 0 - - -;
-#X obj 339 20 r \$0-mute-set;
-#X obj 295 -100 print TEST;
-#N canvas 1000 269 450 300 input 1;
+#N canvas 1000 269 450 300 input 0;
 #X obj 32 -97 kollabs/ds_reg utz /utz/\$1/volume;
 #X obj 32 -77 kollabs/ds_reg utz /utz/\$1/file;
 #X obj 32 -57 kollabs/ds_reg utz /utz/\$1/envelope;
@@ -108,11 +100,7 @@
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 25 0;
-#X connect 19 0 28 0;
-#X connect 20 0 22 0;
-#X connect 21 0 23 0;
-#X connect 24 0 3 0;
-#X connect 25 0 24 0;
-#X connect 27 0 26 0;
+#X connect 18 0 20 0;
+#X connect 19 0 3 0;
+#X connect 20 0 19 0;
 #X coords 0 480 1 479 690 140 0;
