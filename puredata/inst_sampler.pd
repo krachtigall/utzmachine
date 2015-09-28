@@ -1,4 +1,4 @@
-#N canvas 383 438 518 480 10;
+#N canvas 1055 398 518 480 10;
 #X obj 229 152 outlet;
 #X obj 109 -160 s \$0-ctrl-out;
 #X obj 229 125 r \$0-ctrl-out;

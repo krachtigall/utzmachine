@@ -1,4 +1,4 @@
-#N canvas 38 142 1309 914 10;
+#N canvas 526 102 1309 914 10;
 #X obj 196 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 196 162 metro;
@@ -81,6 +81,8 @@
 #X obj 583 518 randomPitchAndLengthOscillator;
 #X obj 59 -104 route \$1;
 #X obj -69 -119 r /utz/\$1;
+#X obj 41 -56 r /utz/\$1/start;
+#X obj -79 34 r /utz/\$1/stop;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -147,3 +149,5 @@
 #X connect 72 0 57 0;
 #X connect 72 1 59 0;
 #X connect 73 0 57 0;
+#X connect 74 0 6 0;
+#X connect 75 0 18 0;
