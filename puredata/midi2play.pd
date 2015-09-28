@@ -1,4 +1,4 @@
-#N canvas 1109 249 434 339 10;
+#N canvas 1108 248 434 339 10;
 #X obj 68 116 r \$0-midi;
 #X obj 68 144 != 0;
 #X obj 68 170 sel 0 1;
@@ -7,7 +7,7 @@
 #X msg 87 217 bang;
 #X obj 87 245 s /utz/\$3/start;
 #X obj 68 267 s /utz/\$3/stop;
-#X obj 68 63 kollabs/midi_r \$0 \$0-midi note \$2 \$1 \$3;
+#X obj 68 63 kollabs/midi_r \$0 \$0-midi note \$2 \$1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
