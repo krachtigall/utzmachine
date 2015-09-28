@@ -1,10 +1,10 @@
-#N canvas 73 56 1134 540 10;
+#N canvas 206 254 1134 540 10;
 #X obj 39 47 ctlin;
 #X obj 39 69 pack f f f;
 #X obj 39 147 list prepend ctl;
 #X obj 149 69 pack f f f;
 #X obj 149 47 notein;
-#X obj 149 147 list prepend note;
+#X obj 149 167 list prepend note;
 #X obj 269 47 bendin;
 #X obj 269 69 pack f f;
 #X obj 269 147 list prepend bend;
@@ -38,10 +38,10 @@
 #X obj 542 96 r \$0-noraw;
 #X obj 422 96 r \$0-noraw;
 #X obj 302 96 r \$0-noraw;
-#X obj 182 96 r \$0-noraw;
+#X obj 182 116 r \$0-noraw;
 #X obj 72 96 r \$0-noraw;
 #X obj 39 122 spigot 1;
-#X obj 149 122 spigot 1;
+#X obj 149 142 spigot 1;
 #X obj 269 121 spigot 1;
 #X obj 389 121 spigot 1;
 #X obj 509 121 spigot 1;
@@ -55,12 +55,13 @@
 #X obj 419 502 s /midi/\$1/in;
 #X obj 280 387 r /midi/\$1/in/print;
 #X obj 942 96 r /midi/\$1/in/raw;
+#X msg 149 96 \$2 \$1 \$3;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 1 2;
 #X connect 1 0 41 0;
 #X connect 2 0 29 0;
-#X connect 3 0 42 0;
+#X connect 3 0 56 0;
 #X connect 4 0 3 0;
 #X connect 4 1 3 1;
 #X connect 4 2 3 2;
@@ -118,3 +119,4 @@
 #X connect 51 0 23 1;
 #X connect 54 0 21 1;
 #X connect 55 0 48 1;
+#X connect 56 0 42 0;
