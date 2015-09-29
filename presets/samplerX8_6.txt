@@ -1,4 +1,0 @@
-kick/TurntableA2.wav snare/ToJingle.wav
-hihat/hihat.wav percussion/Clap-808.wav
-gizmo/squeezetoy.wav gizmo/rotaryphone.wav
-animal/nightingale.wav guns/machinegun.wav;

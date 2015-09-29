@@ -1,4 +1,0 @@
-bassdrum/707.wav snare/snare.wav
-hihat/hihat.wav percussion/Clap-808.wav
-animal/donkey.wav horns/brassHorn.wav
-gizmo/toilet.wav guns/shotgun.wav;

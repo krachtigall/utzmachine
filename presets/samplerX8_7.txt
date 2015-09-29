@@ -1,4 +1,0 @@
-kick/WantQuick.wav clap/Landsky.wav
-80s/Ride80sElectro.wav 80s/Tick80sElectro.wav
-animal/chaffinch.wav voice/unprofessional.wav
-synth/ChordSoftSynth.wav 80s/fhg2_stab_80sfunk03.wav;

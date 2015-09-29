@@ -1,4 +1,0 @@
-bassdrum/kick.wav snare/Materials2.wav
-percussion/Shake-CabasaShort.wav percussion/Clave-808.wav
-animal/dolphin.wav horns/fogHorn.wav
-gizmo/sawing.wav gizmo/ChainSaw.wav;
