@@ -1,4 +1,0 @@
-kick/WetCheese.wav snare/TimeAlone.wav
-percussion/Shake-Maracas1-Hard.wav percussion/Cowbell-808.wav
-animal/oriole.wav voice/gudelaune.wav
-animal/goat.wav gizmo/whip.wav;
