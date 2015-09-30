@@ -1,4 +1,4 @@
-#N canvas 494 87 445 236 10;
+#N canvas 493 87 445 236 10;
 #N canvas 1107 418 463 353 audio 0;
 #X text 130 16 control messages;
 #X obj 134 37 inlet control;
@@ -70,7 +70,7 @@
 #X connect 14 0 10 0;
 #X restore 44 166 pd master;
 #X obj 214 183 print dropped;
-#N canvas 940 87 956 989 UI 1;
+#N canvas 939 87 956 989 UI 1;
 #X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 94 -7 kollabs/ds_gui utz;
@@ -85,8 +85,8 @@
 #X obj 458 280 gui_sampler-control sampler7;
 #X obj 228 280 gui_sampler-control sampler6;
 #X restore 44 51 pd UI;
-#N canvas 289 214 444 266 MIDI 0;
-#N canvas 431 707 450 300 pgm2preset 0;
+#N canvas 288 213 444 266 MIDI 0;
+#N canvas 430 706 450 300 pgm2preset 0;
 #X obj 38 42 pgmin;
 #X obj 38 90 - 1;
 #X obj 38 117 %;
@@ -105,7 +105,7 @@
 #X connect 5 0 7 0;
 #X connect 7 0 9 0;
 #X restore 78 108 pd pgm2preset;
-#N canvas 770 206 450 300 ctl2vol 0;
+#N canvas 769 205 450 300 ctl2vol 0;
 #X obj 41 48 kollabs/midi_r utz /utz/sampler1/volume ctl 1;
 #X obj 41 68 kollabs/midi_r utz /utz/sampler2/volume ctl 2;
 #X obj 41 88 kollabs/midi_r utz /utz/sampler3/volume ctl 3;
@@ -115,8 +115,8 @@
 #X obj 41 168 kollabs/midi_r utz /utz/sampler7/volume ctl 7;
 #X obj 40 188 kollabs/midi_r utz /utz/sampler8/volume ctl 8;
 #X restore 68 86 pd ctl2vol;
-#X obj 58 65 kollabs/midi_in utz;
-#N canvas 149 687 412 300 note2plays 0;
+#X obj 71 25 kollabs/midi_in utz;
+#N canvas 148 686 412 300 note2plays 0;
 #X obj 34 56 midi2play 1 44 sampler1;
 #X obj 34 76 midi2play 1 45 sampler2;
 #X obj 34 96 midi2play 1 46 sampler3;
@@ -141,6 +141,8 @@
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X restore 239 84 pd mpkMiniAdapter;
+#X obj 71 53 print MIDI;
+#X connect 2 0 5 0;
 #X restore 93 52 pd MIDI;
 #N canvas 409 234 433 300 init 0;
 #N canvas 2 87 497 268 dsp 0;
