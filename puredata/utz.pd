@@ -1,5 +1,5 @@
-#N canvas 492 87 445 236 10;
-#N canvas 346 400 463 353 audio 1;
+#N canvas 490 87 445 236 10;
+#N canvas 344 398 463 353 audio 0;
 #X text 130 16 control messages;
 #X obj 134 37 inlet control;
 #X obj 30 296 outlet~;
@@ -37,6 +37,7 @@
 #X connect 14 1 3 0;
 #X connect 15 0 2 0;
 #X connect 15 1 9 1;
+#X connect 16 0 2 0;
 #X restore 44 139 pd audio;
 #N canvas 1128 561 450 300 master 0;
 #X obj 48 221 dac~ 1 2;
@@ -71,7 +72,7 @@
 #X connect 14 0 10 0;
 #X restore 44 166 pd master;
 #X obj 214 183 print dropped;
-#N canvas 938 87 956 989 UI 1;
+#N canvas 936 87 956 989 UI 1;
 #X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 94 -7 kollabs/ds_gui utz;
@@ -118,7 +119,7 @@
 #X obj 40 188 kollabs/midi_r utz /utz/sampler8/volume ctl 8;
 #X restore 68 86 pd ctl2vol;
 #X obj 58 65 kollabs/midi_in utz;
-#N canvas 148 686 412 300 note2plays 1;
+#N canvas 147 685 412 300 note2plays 0;
 #X obj 34 56 midi2play 1 44 sampler1;
 #X obj 34 76 midi2play 1 45 sampler2;
 #X obj 34 96 midi2play 1 46 sampler3;

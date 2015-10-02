@@ -22,21 +22,21 @@
 #X obj 117 112 tgl 15 0 /utz/\$1/reverse /utz/\$1/reverse R 4 7 0 10
 -262144 -1 -1 0 1;
 #X obj 138 82 hsl 128 15 0.25 5 0 0 /utz/\$1/pitch /utz/\$1/pitch pitch
--2 -8 0 10 -262144 -1 -1 2005 1;
+-2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 138 112 hsl 128 15 0 1 0 0 /utz/\$1/position /utz/\$1/position
-position -2 -8 0 10 -262144 -1 -1 2804 1;
+position -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 124 229 hsl 128 15 0 1 0 0 /utz/\$1/right /utz/\$1/right right_limit
--2 -8 0 10 -262144 -1 -1 9100 1;
+-2 -8 0 10 -262144 -1 -1 900 1;
 #X obj 124 199 hsl 128 15 0 1 0 0 /utz/\$1/left /utz/\$1/left left_limit
--2 -8 0 10 -262144 -1 -1 6800 1;
+-2 -8 0 10 -262144 -1 -1 300 1;
 #X obj 97 92 tgl 15 0 /utz/\$1/loop /utz/\$1/loop L 4 7 0 10 -262144
--1 -1 0 1;
-#X obj 274 83 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/pitch /utz/\$1/pitch
-empty 0 -8 0 10 -262144 -1 -1 1 256;
+-1 -1 1 1;
+#X obj 274 82 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/pitch /utz/\$1/pitch
+empty 0 -8 0 10 -262144 -1 -1 0.25 256;
 #X obj 257 199 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/left /utz/\$1/left
-empty 0 -8 0 10 -262144 -1 -1 0.535433 256;
+empty 0 -8 0 10 -262144 -1 -1 0.023622 256;
 #X obj 257 229 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/right /utz/\$1/right
-empty 0 -8 0 10 -262144 -1 -1 0.716535 256;
+empty 0 -8 0 10 -262144 -1 -1 0.0708661 256;
 #X connect 6 0 8 0;
 #X connect 7 0 6 0;
 #X connect 8 0 10 0;
