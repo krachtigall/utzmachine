@@ -1,4 +1,0 @@
-kick/Wicked1.wav snare/Snare-808-Tone1.wav
-tambourine/IrieMun.wav percussion/Clap-808.wav
-animal/robin.wav animal/chimpanzee.wav
-bass/WahingBassEb0.wav 80s/Clave80sElectro.wav;
