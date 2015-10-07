@@ -1,4 +1,4 @@
-#N canvas 211 240 585 580 10;
+#N canvas 210 239 585 580 10;
 #X obj 189 -90 s \$0-ctrl-out;
 #X obj 144 223 s \$0-ctrl-out;
 #X text 156 -59 get parameters;
@@ -20,7 +20,7 @@
 #X obj 144 81 utls/param \$0 \$1 reverse;
 #X obj 144 121 utls/param \$0 \$1 left;
 #X obj 144 141 utls/param \$0 \$1 right;
-#N canvas 532 87 652 300 fileloading 0;
+#N canvas 531 87 652 300 fileloading 0;
 #X obj 106 68 soundfiler;
 #X obj 106 179 s \$0-number-of-samples;
 #X obj 106 96 t f b;
@@ -32,8 +32,8 @@
 #X obj 151 -8 \$0;
 #X obj 106 -25 t s b;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array \$0-array-sample 297029 float 2;
-#X coords 0 1 297029 -1 200 140 1;
+#X array \$0-array-sample 391813 float 2;
+#X coords 0 1 391813 -1 200 140 1;
 #X restore 366 -17 graph;
 #X obj 106 -50 symbol;
 #X connect 0 0 2 0;
@@ -50,7 +50,7 @@
 #X restore 422 33 pd fileloading;
 #X obj 68 312 outlet~;
 #X obj 68 284 catch~ \$0-out;
-#N canvas 445 653 582 300 init 0;
+#N canvas 444 652 582 300 init 0;
 #X obj 23 114 s /utz/\$1/volume;
 #X msg 23 94 1;
 #X obj 185 29 loadbang;
@@ -89,7 +89,7 @@
 #X connect 15 0 16 0;
 #X connect 17 0 18 0;
 #X restore 422 -21 pd init \$1;
-#N canvas 63 235 643 467 time 0;
+#N canvas 62 234 643 467 time 0;
 #X text 237 45 samplerate 441000kHz !;
 #X obj 124 18 r \$0-number-of-samples;
 #X obj 124 46 expr $f1 / 44.1;
@@ -153,7 +153,7 @@
 #X connect 28 0 26 0;
 #X connect 29 0 26 0;
 #X restore 422 54 pd time;
-#N canvas 491 87 508 467 playback 0;
+#N canvas 490 87 508 467 playback 1;
 #X obj 138 80 *~;
 #X obj 138 288 *~;
 #X obj 153 250 line~;
@@ -169,7 +169,7 @@
 #X msg 183 312 \$1 20;
 #X obj 183 272 r \$0-mute-set;
 #X obj 183 292 == 0;
-#N canvas 345 329 660 416 envelope 0;
+#N canvas 344 328 660 416 envelope 1;
 #X obj 176 59 inlet~;
 #X obj 296 67 inlet;
 #X obj 176 238 outlet~;
@@ -179,22 +179,22 @@
 #X obj 177 192 *~;
 #X obj 192 112 spigot;
 #X obj 287 141 sel 0;
-#X msg 287 160 1;
 #X msg 340 118 0 \, 1 0;
-#X msg 382 142 1 \, 0 5;
+#X msg 287 160 1 5;
+#X msg 382 142 0 5;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
 #X connect 4 0 7 1;
 #X connect 4 0 8 0;
-#X connect 4 1 10 0;
+#X connect 4 1 9 0;
 #X connect 4 2 11 0;
 #X connect 4 3 3 0;
 #X connect 5 0 6 1;
 #X connect 6 0 2 0;
 #X connect 7 0 5 0;
-#X connect 8 0 9 0;
-#X connect 9 0 5 0;
-#X connect 10 0 7 0;
+#X connect 8 0 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 5 0;
 #X connect 11 0 7 0;
 #X restore 138 172 pd envelope;
 #X obj 201 125 r \$0-start-set;
@@ -223,7 +223,7 @@
 #X connect 19 0 15 1;
 #X connect 20 0 15 1;
 #X restore 422 110 pd playback;
-#N canvas 580 288 450 300 save 0;
+#N canvas 579 287 450 300 save 0;
 #X obj 32 23 kollabs/ds_reg utz /utz/\$1/volume;
 #X obj 32 43 kollabs/ds_reg utz /utz/\$1/file;
 #X obj 32 63 kollabs/ds_reg utz /utz/\$1/envelope;
@@ -235,7 +235,7 @@
 #X obj 32 184 kollabs/ds_reg utz /utz/\$1/reverse;
 #X obj 32 203 kollabs/ds_reg utz /utz/\$1/mute;
 #X restore 422 0 pd save;
-#N canvas 0 289 701 646 indexing 1;
+#N canvas 0 289 701 646 indexing 0;
 #X obj 205 450 unsig~ 50;
 #X obj 108 434 +~;
 #X obj 205 478 s /utz/\$1/position;
