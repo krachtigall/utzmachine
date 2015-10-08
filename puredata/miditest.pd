@@ -1,0 +1,8 @@
+#N canvas 986 325 450 300 10;
+#X obj 134 60 notein;
+#X obj 139 108 pack f f f;
+#X obj 121 143 print MIDI;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 0 2 1 2;
+#X connect 1 0 2 0;
