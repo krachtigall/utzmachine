@@ -1,0 +1,18 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.4.0" name="midipatching">
+ <output-sockets>
+  <socket exclusive="off" client="Arduino Leonardo" type="alsa-midi" name="Arduino Leonardo MIDI 1">
+   <plug>Arduino Leonardo MIDI 1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket exclusive="off" client="Pure Data" type="alsa-midi" name="Pure Data 1">
+   <plug>Pure Data Midi-In 1</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable output="Arduino Leonardo MIDI 1" input="Pure Data 1" type="alsa-midi"/>
+ </cables>
+</patchbay>
+
