@@ -334,48 +334,6 @@
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
 </package>
-<package name="1X04">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-1.27" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="1.27" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="-0.635" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="4.445" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="1.27" x2="5.08" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="0.635" x2="5.08" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="-0.635" x2="4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="-1.27" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="-3.81" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="4" x="3.81" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-5.1562" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
-<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
-</package>
 <package name="1X02">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
@@ -1670,21 +1628,21 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="ANALOG" library="pinhead" package="1X06" value="" x="74.93" y="7.62"/>
+<element name="ANALOG" library="pinhead" package="1X06" value="" x="77.47" y="7.62"/>
 <element name="DIGI1" library="pinhead" package="1X08" value="" x="80.01" y="77.47" rot="R180"/>
 <element name="DIGI2" library="pinhead" package="1X10" value="" x="55.88" y="77.47" rot="R180"/>
-<element name="R20" library="rcl" package="0207/7" value="100k" x="72.39" y="30.48" rot="R180"/>
-<element name="R21" library="rcl" package="0207/7" value="100k" x="69.85" y="27.94" rot="R180"/>
-<element name="R22" library="rcl" package="0207/7" value="100k" x="67.31" y="25.4" rot="R180"/>
-<element name="R23" library="rcl" package="0207/7" value="100k" x="64.77" y="22.86" rot="R180"/>
-<element name="R19" library="rcl" package="0207/7" value="100k" x="74.93" y="33.02" rot="R180"/>
-<element name="R18" library="rcl" package="0207/7" value="100k" x="77.47" y="35.56" rot="R180"/>
-<element name="R1" library="rcl" package="0207/7" value="100" x="81.28" y="16.51" rot="R90"/>
-<element name="R2" library="rcl" package="0207/7" value="100" x="78.74" y="16.51" rot="R90"/>
-<element name="R3" library="rcl" package="0207/7" value="100" x="76.2" y="16.51" rot="R90"/>
-<element name="R4" library="rcl" package="0207/7" value="100" x="73.66" y="16.51" rot="R90"/>
-<element name="R5" library="rcl" package="0207/7" value="100" x="71.12" y="16.51" rot="R90"/>
-<element name="R6" library="rcl" package="0207/7" value="100" x="68.58" y="16.51" rot="R90"/>
+<element name="R20" library="rcl" package="0207/7" value="100k" x="74.93" y="33.02" rot="R180"/>
+<element name="R21" library="rcl" package="0207/7" value="100k" x="72.39" y="30.48" rot="R180"/>
+<element name="R22" library="rcl" package="0207/7" value="100k" x="69.85" y="27.94" rot="R180"/>
+<element name="R23" library="rcl" package="0207/7" value="100k" x="67.31" y="25.4" rot="R180"/>
+<element name="R19" library="rcl" package="0207/7" value="100k" x="77.47" y="35.56" rot="R180"/>
+<element name="R18" library="rcl" package="0207/7" value="100k" x="80.01" y="38.1" rot="R180"/>
+<element name="R1" library="rcl" package="0207/7" value="100" x="83.82" y="16.51" rot="R90"/>
+<element name="R2" library="rcl" package="0207/7" value="100" x="81.28" y="16.51" rot="R90"/>
+<element name="R3" library="rcl" package="0207/7" value="100" x="78.74" y="16.51" rot="R90"/>
+<element name="R4" library="rcl" package="0207/7" value="100" x="76.2" y="16.51" rot="R90"/>
+<element name="R5" library="rcl" package="0207/7" value="100" x="73.66" y="16.51" rot="R90"/>
+<element name="R6" library="rcl" package="0207/7" value="100" x="71.12" y="16.51" rot="R90"/>
 <element name="R7" library="rcl" package="0207/7" value="100" x="71.12" y="67.31" rot="R270"/>
 <element name="R8" library="rcl" package="0207/7" value="100" x="73.66" y="67.31" rot="R270"/>
 <element name="R9" library="rcl" package="0207/7" value="100" x="76.2" y="67.31" rot="R270"/>
@@ -1696,18 +1654,18 @@ design rules under a new name.</description>
 <element name="R15" library="rcl" package="0207/7" value="100" x="62.23" y="67.31" rot="R270"/>
 <element name="R16" library="rcl" package="0207/7" value="100" x="59.69" y="67.31" rot="R270"/>
 <element name="R17" library="rcl" package="0207/7" value="100" x="57.15" y="67.31" rot="R270"/>
-<element name="POWER" library="pinhead" package="1X08" value="" x="48.26" y="7.62"/>
-<element name="MODULE1" library="pinhead" package="1X03" value="" x="69.85" y="46.99" rot="R90"/>
+<element name="POWER" library="pinhead" package="1X08" value="" x="57.15" y="7.62"/>
+<element name="MODULE1" library="pinhead" package="1X03" value="" x="71.12" y="46.99" rot="R90"/>
 <element name="MODULE2" library="pinhead" package="1X03" value="" x="73.66" y="46.99" rot="R90"/>
-<element name="MODULE3" library="pinhead" package="1X03" value="" x="77.47" y="46.99" rot="R90"/>
-<element name="MODULE4" library="pinhead" package="1X03" value="" x="81.28" y="46.99" rot="R90"/>
-<element name="MODULE5" library="pinhead" package="1X03" value="" x="85.09" y="46.99" rot="R90"/>
-<element name="MODULE6" library="pinhead" package="1X03" value="" x="66.04" y="46.99" rot="R90"/>
-<element name="MODULE7" library="pinhead" package="1X03" value="" x="62.23" y="46.99" rot="R90"/>
-<element name="MODULE8" library="pinhead" package="1X03" value="" x="58.42" y="46.99" rot="R90"/>
-<element name="PRESET" library="pinhead" package="1X04" value="" x="36.83" y="64.77" rot="R270"/>
-<element name="JP1" library="pinhead" package="1X02" value="" x="3.81" y="-3.81"/>
-<element name="R24" library="rcl" package="0207/7" value="10k" x="5.08" y="-10.16"/>
+<element name="MODULE3" library="pinhead" package="1X03" value="" x="76.2" y="46.99" rot="R90"/>
+<element name="MODULE4" library="pinhead" package="1X03" value="" x="78.74" y="46.99" rot="R90"/>
+<element name="MODULE5" library="pinhead" package="1X03" value="" x="81.28" y="46.99" rot="R90"/>
+<element name="MODULE6" library="pinhead" package="1X03" value="" x="83.82" y="46.99" rot="R90"/>
+<element name="MODULE7" library="pinhead" package="1X03" value="" x="66.04" y="46.99" rot="R90"/>
+<element name="MODULE8" library="pinhead" package="1X03" value="" x="62.23" y="46.99" rot="R90"/>
+<element name="LIGHT" library="pinhead" package="1X02" value="" x="53.34" y="58.42"/>
+<element name="R24" library="rcl" package="0207/7" value="10k" x="54.61" y="67.31" rot="R270"/>
+<element name="PRESET" library="pinhead" package="1X03" value="" x="57.15" y="54.61"/>
 </elements>
 <signals>
 <signal name="D2">
@@ -1732,50 +1690,50 @@ design rules under a new name.</description>
 <contactref element="MODULE6" pad="1"/>
 <contactref element="MODULE7" pad="1"/>
 <contactref element="MODULE8" pad="1"/>
+<contactref element="LIGHT" pad="1"/>
 <contactref element="PRESET" pad="1"/>
-<contactref element="JP1" pad="1"/>
-<wire x1="36.83" y1="68.58" x2="52.07" y2="77.47" width="0" layer="19" extent="1-1"/>
-<wire x1="58.42" y1="44.45" x2="36.83" y2="68.58" width="0" layer="19" extent="1-1"/>
-<wire x1="62.23" y1="44.45" x2="58.42" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="52.07" y1="58.42" x2="52.07" y2="77.47" width="0" layer="19" extent="1-1"/>
+<wire x1="62.23" y1="44.45" x2="52.07" y2="77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="66.04" y1="44.45" x2="62.23" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="69.85" y1="44.45" x2="66.04" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="73.66" y1="44.45" x2="69.85" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="77.47" y1="44.45" x2="73.66" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="81.28" y1="44.45" x2="77.47" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="85.09" y1="44.45" x2="81.28" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="44.45" y1="7.62" x2="58.42" y2="44.45" width="0" layer="19" extent="1-1"/>
-<wire x1="41.91" y1="7.62" x2="44.45" y2="7.62" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="-3.81" x2="41.91" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="44.45" x2="66.04" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="73.66" y1="44.45" x2="71.12" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="76.2" y1="44.45" x2="73.66" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="78.74" y1="44.45" x2="76.2" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="81.28" y1="44.45" x2="78.74" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="83.82" y1="44.45" x2="81.28" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="53.34" y1="7.62" x2="62.23" y2="44.45" width="0" layer="19" extent="1-1"/>
+<wire x1="50.8" y1="7.62" x2="53.34" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="54.61" y1="54.61" x2="50.8" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A0">
 <contactref element="ANALOG" pad="1"/>
 <contactref element="R6" pad="1"/>
-<wire x1="68.58" y1="7.62" x2="68.58" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="7.62" x2="71.12" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A1">
 <contactref element="ANALOG" pad="2"/>
 <contactref element="R5" pad="1"/>
-<wire x1="71.12" y1="7.62" x2="71.12" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="73.66" y1="7.62" x2="73.66" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A2">
 <contactref element="ANALOG" pad="3"/>
 <contactref element="R4" pad="1"/>
-<wire x1="73.66" y1="7.62" x2="73.66" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="76.2" y1="7.62" x2="76.2" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A3">
 <contactref element="ANALOG" pad="4"/>
 <contactref element="R3" pad="1"/>
-<wire x1="76.2" y1="7.62" x2="76.2" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="78.74" y1="7.62" x2="78.74" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A4">
 <contactref element="ANALOG" pad="5"/>
 <contactref element="R2" pad="1"/>
-<wire x1="78.74" y1="7.62" x2="78.74" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="81.28" y1="7.62" x2="81.28" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A5">
 <contactref element="ANALOG" pad="6"/>
 <contactref element="R1" pad="1"/>
-<wire x1="81.28" y1="12.7" x2="81.28" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="83.82" y1="12.7" x2="83.82" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="D4">
 <contactref element="DIGI1" pad="5"/>
@@ -1815,12 +1773,12 @@ design rules under a new name.</description>
 <contactref element="R22" pad="2"/>
 <contactref element="R23" pad="2"/>
 <contactref element="POWER" pad="4"/>
+<wire x1="73.66" y1="35.56" x2="76.2" y2="38.1" width="0" layer="19" extent="1-1"/>
 <wire x1="71.12" y1="33.02" x2="73.66" y2="35.56" width="0" layer="19" extent="1-1"/>
 <wire x1="68.58" y1="30.48" x2="71.12" y2="33.02" width="0" layer="19" extent="1-1"/>
 <wire x1="66.04" y1="27.94" x2="68.58" y2="30.48" width="0" layer="19" extent="1-1"/>
 <wire x1="63.5" y1="25.4" x2="66.04" y2="27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="60.96" y1="22.86" x2="63.5" y2="25.4" width="0" layer="19" extent="1-1"/>
-<wire x1="46.99" y1="7.62" x2="60.96" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="7.62" x2="63.5" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TX">
 <contactref element="DIGI1" pad="2"/>
@@ -1846,7 +1804,7 @@ design rules under a new name.</description>
 <signal name="D13">
 <contactref element="DIGI2" pad="6"/>
 <contactref element="R24" pad="1"/>
-<wire x1="1.27" y1="-10.16" x2="54.61" y2="77.47" width="0" layer="19" extent="1-1"/>
+<wire x1="54.61" y1="71.12" x2="54.61" y2="77.47" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AREF">
 <contactref element="DIGI2" pad="8"/>
@@ -1860,27 +1818,27 @@ design rules under a new name.</description>
 <signal name="XD0">
 <contactref element="R17" pad="2"/>
 <contactref element="PRESET" pad="2"/>
-<wire x1="36.83" y1="66.04" x2="57.15" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="57.15" y1="54.61" x2="57.15" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD1">
 <contactref element="R16" pad="2"/>
 <contactref element="PRESET" pad="3"/>
-<wire x1="36.83" y1="63.5" x2="59.69" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="59.69" y1="54.61" x2="59.69" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD10">
 <contactref element="R15" pad="2"/>
 <contactref element="MODULE8" pad="2"/>
-<wire x1="58.42" y1="46.99" x2="62.23" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="62.23" y1="46.99" x2="62.23" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD9">
 <contactref element="R14" pad="2"/>
 <contactref element="MODULE7" pad="3"/>
-<wire x1="62.23" y1="49.53" x2="64.77" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="49.53" x2="64.77" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD8">
 <contactref element="R13" pad="2"/>
 <contactref element="MODULE7" pad="2"/>
-<wire x1="62.23" y1="46.99" x2="67.31" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="46.99" x2="67.31" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="POWER" pad="1"/>
@@ -1900,84 +1858,82 @@ design rules under a new name.</description>
 <signal name="XA5">
 <contactref element="R18" pad="1"/>
 <contactref element="R1" pad="2"/>
-<contactref element="MODULE4" pad="3"/>
-<wire x1="81.28" y1="35.56" x2="81.28" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="81.28" y1="20.32" x2="81.28" y2="35.56" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE6" pad="3"/>
+<wire x1="83.82" y1="38.1" x2="83.82" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="83.82" y1="20.32" x2="83.82" y2="38.1" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XA4">
 <contactref element="R2" pad="2"/>
 <contactref element="R19" pad="1"/>
-<contactref element="MODULE3" pad="3"/>
-<wire x1="78.74" y1="33.02" x2="77.47" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="78.74" y1="20.32" x2="78.74" y2="33.02" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE5" pad="3"/>
+<wire x1="81.28" y1="35.56" x2="81.28" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="81.28" y1="20.32" x2="81.28" y2="35.56" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XA3">
 <contactref element="R20" pad="1"/>
 <contactref element="R3" pad="2"/>
-<contactref element="MODULE2" pad="3"/>
-<wire x1="76.2" y1="30.48" x2="73.66" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="76.2" y1="20.32" x2="76.2" y2="30.48" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE4" pad="3"/>
+<contactref element="MODULE3" pad="3"/>
+<wire x1="76.2" y1="49.53" x2="78.74" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="78.74" y1="33.02" x2="78.74" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="78.74" y1="20.32" x2="78.74" y2="33.02" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XA2">
 <contactref element="R4" pad="2"/>
 <contactref element="R21" pad="1"/>
-<contactref element="MODULE1" pad="3"/>
-<wire x1="73.66" y1="27.94" x2="69.85" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="73.66" y1="20.32" x2="73.66" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="76.2" y1="20.32" x2="76.2" y2="30.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XA1">
 <contactref element="R22" pad="1"/>
 <contactref element="R5" pad="2"/>
-<contactref element="MODULE6" pad="3"/>
-<wire x1="71.12" y1="25.4" x2="66.04" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="71.12" y1="20.32" x2="71.12" y2="25.4" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE2" pad="3"/>
+<wire x1="73.66" y1="27.94" x2="73.66" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="73.66" y1="20.32" x2="73.66" y2="27.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XA0">
 <contactref element="R23" pad="1"/>
 <contactref element="R6" pad="2"/>
-<contactref element="MODULE5" pad="3"/>
-<wire x1="68.58" y1="22.86" x2="85.09" y2="49.53" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="20.32" x2="68.58" y2="22.86" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE1" pad="3"/>
+<wire x1="71.12" y1="25.4" x2="71.12" y2="49.53" width="0" layer="19" extent="1-1"/>
+<wire x1="71.12" y1="20.32" x2="71.12" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD2">
 <contactref element="R12" pad="2"/>
-<contactref element="MODULE1" pad="2"/>
-<wire x1="69.85" y1="46.99" x2="83.82" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE6" pad="2"/>
+<wire x1="83.82" y1="46.99" x2="83.82" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD3">
 <contactref element="R11" pad="2"/>
-<contactref element="MODULE2" pad="2"/>
-<wire x1="73.66" y1="46.99" x2="81.28" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE5" pad="2"/>
+<wire x1="81.28" y1="46.99" x2="81.28" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD4">
 <contactref element="R10" pad="2"/>
-<contactref element="MODULE3" pad="2"/>
-<wire x1="77.47" y1="46.99" x2="78.74" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE4" pad="2"/>
+<wire x1="78.74" y1="46.99" x2="78.74" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD5">
 <contactref element="R9" pad="2"/>
-<contactref element="MODULE4" pad="2"/>
-<wire x1="81.28" y1="46.99" x2="76.2" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE3" pad="2"/>
+<wire x1="76.2" y1="46.99" x2="76.2" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD6">
 <contactref element="R8" pad="2"/>
-<contactref element="MODULE5" pad="2"/>
-<wire x1="85.09" y1="46.99" x2="73.66" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE2" pad="2"/>
+<wire x1="73.66" y1="46.99" x2="73.66" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XD7">
 <contactref element="R7" pad="2"/>
-<contactref element="MODULE6" pad="2"/>
-<wire x1="66.04" y1="46.99" x2="71.12" y2="63.5" width="0" layer="19" extent="1-1"/>
+<contactref element="MODULE1" pad="2"/>
+<wire x1="71.12" y1="46.99" x2="71.12" y2="63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N.C.">
 <contactref element="MODULE8" pad="3"/>
-<contactref element="PRESET" pad="4"/>
-<wire x1="36.83" y1="60.96" x2="58.42" y2="49.53" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LED">
-<contactref element="JP1" pad="2"/>
+<contactref element="LIGHT" pad="2"/>
 <contactref element="R24" pad="2"/>
-<wire x1="8.89" y1="-10.16" x2="5.08" y2="-3.81" width="0" layer="19" extent="1-1"/>
+<wire x1="54.61" y1="63.5" x2="54.61" y2="58.42" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
