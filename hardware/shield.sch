@@ -4266,12 +4266,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="DIGI1" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="ANALOG" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="DIGI2" library="pinhead" deviceset="PINHD-1X10" device=""/>
-<part name="R20" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
-<part name="R21" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
-<part name="R22" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
-<part name="R23" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
-<part name="R19" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
-<part name="R18" library="rcl" deviceset="R-EU_" device="0207/7" value="100k"/>
+<part name="R20" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
+<part name="R21" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
+<part name="R22" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
+<part name="R23" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
+<part name="R19" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
+<part name="R18" library="rcl" deviceset="R-EU_" device="0207/7" value="1k"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>

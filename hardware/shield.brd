@@ -1631,12 +1631,12 @@ design rules under a new name.</description>
 <element name="ANALOG" library="pinhead" package="1X06" value="" x="77.47" y="7.62"/>
 <element name="DIGI1" library="pinhead" package="1X08" value="" x="80.01" y="77.47" rot="R180"/>
 <element name="DIGI2" library="pinhead" package="1X10" value="" x="55.88" y="77.47" rot="R180"/>
-<element name="R20" library="rcl" package="0207/7" value="100k" x="74.93" y="33.02" rot="R180"/>
-<element name="R21" library="rcl" package="0207/7" value="100k" x="72.39" y="30.48" rot="R180"/>
-<element name="R22" library="rcl" package="0207/7" value="100k" x="69.85" y="27.94" rot="R180"/>
-<element name="R23" library="rcl" package="0207/7" value="100k" x="67.31" y="25.4" rot="R180"/>
-<element name="R19" library="rcl" package="0207/7" value="100k" x="77.47" y="35.56" rot="R180"/>
-<element name="R18" library="rcl" package="0207/7" value="100k" x="80.01" y="38.1" rot="R180"/>
+<element name="R20" library="rcl" package="0207/7" value="1k" x="74.93" y="33.02" rot="R180"/>
+<element name="R21" library="rcl" package="0207/7" value="1k" x="72.39" y="30.48" rot="R180"/>
+<element name="R22" library="rcl" package="0207/7" value="1k" x="69.85" y="27.94" rot="R180"/>
+<element name="R23" library="rcl" package="0207/7" value="1k" x="67.31" y="25.4" rot="R180"/>
+<element name="R19" library="rcl" package="0207/7" value="1k" x="77.47" y="35.56" rot="R180"/>
+<element name="R18" library="rcl" package="0207/7" value="1k" x="80.01" y="38.1" rot="R180"/>
 <element name="R1" library="rcl" package="0207/7" value="100" x="83.82" y="16.51" rot="R90"/>
 <element name="R2" library="rcl" package="0207/7" value="100" x="81.28" y="16.51" rot="R90"/>
 <element name="R3" library="rcl" package="0207/7" value="100" x="78.74" y="16.51" rot="R90"/>

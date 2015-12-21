@@ -1,15 +1,16 @@
 #define DEBUG
-#undef  DEBUG
+//#undef  DEBUG
 
 #define g_NumberOfButtons     11    // number of used buttons
 #define g_MidiChannel          1    // midi channel
 #define g_NoteVelocity        64    // velocity for note on messages
 #define g_DebounceDelay      500    // delay in microseconds
-#define g_Threshold            0    // threshold for detecting analog changes
+#define g_Threshold            1    // threshold for detecting analog changes
+#define g_Divisor              8    // divisor for dividing analogreads to midicc
 
 // used digital pins with MIDI note mapping
 byte g_ButtonPins[g_NumberOfButtons]  = {  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12};
-byte g_MidiNotes[g_NumberOfButtons]   = { 36, 37, 38, 44, 45, 46, 47, 48, 49, 50, 51};
+byte g_MidiNotes[g_NumberOfButtons]   = { 36, 37, 51, 44, 45, 46, 47, 48, 49, 50, 52};
 
 // used analog pins with MIDI cc mapping
 
@@ -34,8 +35,8 @@ int g_A = 0;     // pointer to analog input for round-robin-polling
 
 // program change
 int g_Program = 0;
-int g_ProgUp = 11;
-int g_ProgDown = 12;
+int g_ProgUp = 2;
+int g_ProgDown = 3;
 int g_ProgMax = 128;
 
 // output pin for status led
@@ -120,7 +121,7 @@ void loop() {
       // check transition
       if (g_ButtonCycle1[i] != g_ButtonStates[i])
       {
-        if (g_ButtonCycle1[i] == HIGH)
+        if (g_ButtonCycle1[i] == LOW)
         { // button has been pressed
           if (g_ButtonPins[i] == g_ProgUp || g_ButtonPins[i] == g_ProgDown)
           { // send Program change
@@ -140,8 +141,8 @@ void loop() {
               }
             }
 
-            //progChange(g_MidiChannel, g_Program);
-            controlChange(g_MidiChannel, 1, g_Program);
+            programChange(g_MidiChannel, g_Program);
+            //controlChange(g_MidiChannel, 1, g_Program);
 
 #ifdef DEBUG
             Serial.print("ProgramChange:");
@@ -184,10 +185,10 @@ void loop() {
     g_A = 0;
   
   // read out analog
-  g_AnalogStatesNew[g_A] = analogRead(g_AnalogPins[g_A]) / 8;
+  g_AnalogStatesNew[g_A] = analogRead(g_AnalogPins[g_A]) / g_Divisor;
   int diff = g_AnalogStatesNew[g_A] - g_AnalogStatesPrev[g_A];
  
-  if (diff > g_Threshold || diff < -1* g_Threshold)
+  if (diff >= g_Threshold || diff <= -1* g_Threshold)
   { // analog value has changed
     // send midi cc
     controlChange(g_MidiChannel, g_MidiCC[g_A], g_AnalogStatesNew[g_A]);
