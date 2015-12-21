@@ -36,7 +36,7 @@
 /utz/sampler4/volume 0.362
 /utz/sampler3/envelope 0
 /utz/sampler3/file samples/percussion/Maracas-808.wav
-/utz/sampler3/volume 0.433
+/utz/sampler3/volume 0.633
 /utz/sampler2/envelope 0
 /utz/sampler2/file samples/snare/Snare-808-Tone1.wav
 /utz/sampler2/volume 0.889
@@ -54,7 +54,7 @@
 /utz/master/volume 1
 /utz/sampler8/envelope 0
 /utz/sampler8/file samples/guns/shotgun.wav
-/utz/sampler8/volume 0.362
+/utz/sampler8/volume 0.332
 /utz/sampler7/envelope 1
 /utz/sampler7/file samples/gizmo/toilet.wav
 /utz/sampler7/volume 0.527
@@ -63,7 +63,7 @@
 /utz/sampler6/volume 0.425
 /utz/sampler5/envelope 1
 /utz/sampler5/file samples/animal/donkey.wav
-/utz/sampler5/volume 0.44
+/utz/sampler5/volume 0.39
 /utz/sampler4/envelope 0
 /utz/sampler4/file samples/clap/Clap-808.wav
 /utz/sampler4/volume 0.401
@@ -87,10 +87,10 @@
 /utz/master/volume 1
 /utz/sampler8/envelope 1
 /utz/sampler8/file samples/gizmo/ChainSaw.wav
-/utz/sampler8/volume 0.212
+/utz/sampler8/volume 0.192
 /utz/sampler7/envelope 1
 /utz/sampler7/file samples/gizmo/sawing.wav
-/utz/sampler7/volume 0.322
+/utz/sampler7/volume 0.302
 /utz/sampler6/envelope 1
 /utz/sampler6/file samples/horns/fogHorn.wav
 /utz/sampler6/volume 0.251
@@ -123,7 +123,7 @@
 /utz/sampler8/volume 0.519
 /utz/sampler7/envelope 1
 /utz/sampler7/file samples/voice/houston.wav
-/utz/sampler7/volume 0.322
+/utz/sampler7/volume 0.382
 /utz/sampler6/envelope 0
 /utz/sampler6/file samples/fx/PotHit12(FX).wav
 /utz/sampler6/volume 0.251
@@ -174,7 +174,7 @@
 /utz/sampler2/volume 0.409
 /utz/sampler1/envelope 0
 /utz/sampler1/file samples/kick/WetCheese.wav
-/utz/sampler1/volume 0.795
+/utz/sampler1/volume 0.595
 ======================== SCENE 6 ========================
 # PROPERTIES
 /duration 0
@@ -224,7 +224,7 @@
 /utz/sampler7/file samples/animal/nightingale.wav
 /utz/sampler7/volume 0.259
 /utz/sampler6/envelope 1
-/utz/sampler6/file samples/voice/evilLaugh.wav
+/utz/sampler6/file samples/voice/justinbieber.wav
 /utz/sampler6/volume 0.85
 /utz/sampler5/envelope 1
 /utz/sampler5/file samples/gizmo/squeezetoy.wav
@@ -240,7 +240,7 @@
 /utz/sampler2/volume 0.314
 /utz/sampler1/envelope 0
 /utz/sampler1/file samples/kick/WetBuzz.wav
-/utz/sampler1/volume 0.614
+/utz/sampler1/volume 0.594
 ======================== SCENE 8 ========================
 # PROPERTIES
 /duration 0
@@ -255,7 +255,7 @@
 /utz/sampler8/volume 0.22
 /utz/sampler7/envelope 1
 /utz/sampler7/file samples/voice/unprofessional.wav
-/utz/sampler7/volume 0.338
+/utz/sampler7/volume 0.298
 /utz/sampler6/envelope 1
 /utz/sampler6/file samples/synth/ChordSoftSynth.wav
 /utz/sampler6/volume 0.244
@@ -267,10 +267,43 @@
 /utz/sampler4/volume 0.503
 /utz/sampler3/envelope 1
 /utz/sampler3/file samples/80s/Ride80sElectro.wav
-/utz/sampler3/volume 0.062
+*/utz/sampler3/volume 0.062
 /utz/sampler2/envelope 0
 /utz/sampler2/file samples/clap/NoContext.wav
 /utz/sampler2/volume 0.33
 /utz/sampler1/envelope 0
 /utz/sampler1/file samples/kick/WantQuick.wav
 /utz/sampler1/volume 0.614
+======================== SCENE 9 ========================
+# PROPERTIES
+/duration 0
+/name <unnamed>
+# SETTINGS
+# TABLES
+# DATA
+/utz/master/mute 0
+/utz/master/volume 1
+/utz/sampler8/envelope 1
+/utz/sampler8/file samples/pots/lowconga.wav
+/utz/sampler8/volume 0.4
+/utz/sampler7/envelope 1
+/utz/sampler7/file samples/pots/justinbieber.wav
+/utz/sampler7/volume 0.35
+/utz/sampler6/envelope 1
+/utz/sampler6/file samples/pots/hiconga.wav
+/utz/sampler6/volume 0.4
+/utz/sampler5/envelope 1
+/utz/sampler5/file samples/pots/cowbell.wav
+/utz/sampler5/volume 0.4
+/utz/sampler4/envelope 1
+/utz/sampler4/file samples/pots/midconga.wav
+/utz/sampler4/volume 0.4
+/utz/sampler3/envelope 1
+/utz/sampler3/file samples/pots/tambu.wav
+/utz/sampler3/volume 0.5
+/utz/sampler2/envelope 1
+/utz/sampler2/file samples/pots/bigpot.wav
+/utz/sampler2/volume 0.4
+/utz/sampler1/envelope 1
+/utz/sampler1/file samples/pots/tom1.wav
+/utz/sampler1/volume 0.4
