@@ -1642,7 +1642,7 @@ single carbon potentiometer, 16 mm, S3ROH</description>
 <parts>
 <part name="X2" library="con-neutrik_ag" deviceset="MC3?" device="FAH-0"/>
 <part name="S1" library="switch" deviceset="RDT1034" device=""/>
-<part name="R1" library="piher" deviceset="PC16-SHM2" device=""/>
+<part name="R1" library="piher" deviceset="PC16-SHM2" device="" value="10k"/>
 </parts>
 <sheets>
 <sheet>
