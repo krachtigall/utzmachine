@@ -1,17 +1,58 @@
-#N canvas 42 114 596 439 10;
-#X msg 166 98 1;
-#X msg 176 120 0.3;
-#X msg 183 142 0;
-#X obj 166 217 inst_sampler~ help;
-#X obj 166 245 env_volume~ help;
+#N canvas 538 156 596 439 10;
 #X obj 166 273 dac~ 1 2;
-#X msg 265 88 samples/kicks/707.wav;
-#X msg 261 124 file \$1;
-#X connect 0 0 3 0;
-#X connect 1 0 3 0;
+#X msg 81 124 file \$1;
+#X obj 81 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 81 64 openpanel;
+#X msg 260 188 loop \$1;
+#X obj 260 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 330 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 330 188 reverse \$1;
+#X msg 87 192 reset;
+#X obj 291 74 vsl 15 64 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 700 1;
+#X obj 408 72 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2200 1;
+#X obj 408 102 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 9000 1;
+#X msg 340 91 left \$1;
+#X msg 342 120 right \$1;
+#X msg 291 143 pitch \$1;
+#X obj 285 247 vsl 15 64 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 285 316 volume \$1;
+#X obj 184 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 166 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 111 143 load;
+#X obj 166 245 env_volume~ help;
+#X obj 166 217 inst_sampler~ help;
+#X msg 105 84 samples/kicks/707.wav;
+#X obj 81 104 list;
+#X connect 1 0 21 0;
 #X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 0 5 1;
+#X connect 3 0 23 0;
+#X connect 4 0 21 0;
+#X connect 5 0 4 0;
 #X connect 6 0 7 0;
-#X connect 7 0 3 0;
+#X connect 7 0 21 0;
+#X connect 8 0 21 0;
+#X connect 9 0 14 0;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 21 0;
+#X connect 13 0 21 0;
+#X connect 14 0 21 0;
+#X connect 15 0 16 0;
+#X connect 16 0 20 1;
+#X connect 17 0 21 0;
+#X connect 18 0 21 0;
+#X connect 19 0 21 0;
+#X connect 20 0 0 0;
+#X connect 20 0 0 1;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 1 0;
