@@ -1,0 +1,16 @@
+#N canvas 1151 507 450 300 10;
+#X obj 38 137 osc~ 440;
+#X obj 38 193 dac~ 1 2;
+#X msg 170 88 0;
+#X obj 38 165 env_adsr~ help;
+#X msg 146 54 1;
+#X obj 240 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 240 144 enable \$1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 3 1;
