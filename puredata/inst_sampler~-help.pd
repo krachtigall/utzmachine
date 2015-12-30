@@ -1,4 +1,4 @@
-#N canvas 22 558 596 435 10;
+#N canvas 21 557 596 435 10;
 #X obj 136 343 dac~ 1 2;
 #X msg 136 135 file \$1;
 #X obj 136 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -12,7 +12,7 @@
 #X msg 300 258 reverse \$1;
 #X msg 186 204 reset;
 #X obj 261 144 vsl 15 64 0.1 3 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5000 1;
 #X obj 378 142 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 378 172 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
@@ -21,7 +21,7 @@
 #X msg 312 190 right \$1;
 #X msg 261 213 pitch \$1;
 #X obj 255 317 vsl 15 64 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4400 1;
 #X msg 255 386 volume \$1;
 #X obj 103 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -45,6 +45,8 @@
 #X msg 229 166 1;
 #X msg 230 189 0.5;
 #X msg 229 141 2;
+#X msg 20 104 file samples/snare/Low80s.wav;
+#X msg 10 83 file samples/kick/707.wav;
 #X connect 1 0 27 0;
 #X connect 2 0 3 0;
 #X connect 3 0 21 0;
@@ -80,3 +82,5 @@
 #X connect 32 0 14 0;
 #X connect 33 0 14 0;
 #X connect 34 0 14 0;
+#X connect 35 0 24 0;
+#X connect 36 0 24 0;
