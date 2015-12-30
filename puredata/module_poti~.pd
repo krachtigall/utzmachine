@@ -19,6 +19,7 @@
 #X obj 89 137 env_adsr~ \$1;
 #X obj 89 165 env_volume~ \$1;
 #X obj 58 29 midi2play \$2 \$3 \$4 \$1;
+#X obj 35 55 kollabs/midi_r utz /utz/\$1;
 #X connect 2 0 8 1;
 #X connect 3 0 8 1;
 #X connect 4 0 8 1;
