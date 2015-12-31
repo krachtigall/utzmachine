@@ -1,4 +1,4 @@
-#N canvas 19 555 596 435 10;
+#N canvas 607 437 596 435 10;
 #X obj 136 343 dac~ 1 2;
 #X msg 136 135 file \$1;
 #X obj 136 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -21,7 +21,7 @@
 #X msg 312 190 right \$1;
 #X msg 261 213 pitch \$1;
 #X obj 255 317 vsl 15 64 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 6300 1;
 #X msg 255 386 volume \$1;
 #X obj 103 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
