@@ -1,5 +1,5 @@
-#N canvas 516 87 467 282 10;
-#N canvas 709 87 1165 989 UI 0;
+#N canvas 513 87 467 282 10;
+#N canvas 704 87 1165 989 UI 0;
 #X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 94 -7 kollabs/ds_gui utz;
@@ -17,11 +17,11 @@
 #X obj 583 281 gui_sampler-control voice;
 #X obj 875 281 gui_sampler-control noise;
 #X restore 148 112 pd UI;
-#N canvas 133 211 447 274 MIDI 1;
+#N canvas 129 207 447 274 MIDI 0;
 #X obj 31 35 kollabs/midi_in utz;
 #X obj 31 88 print MIDI;
-#N canvas 2 87 429 226 mpkMiniAdapter 1;
-#N canvas 2 451 450 300 ctl2vol 0;
+#N canvas 2 87 429 226 mpkMiniAdapter 0;
+#N canvas 2 450 450 300 ctl2vol 0;
 #X obj 41 48 kollabs/midi_r utz /utz/bassdrum/volume ctl 1 17;
 #X obj 41 68 kollabs/midi_r utz /utz/snare/volume ctl 2 17;
 #X obj 41 88 kollabs/midi_r utz /utz/cymbal/volume ctl 3 17;
@@ -33,7 +33,7 @@
 #X obj 40 227 kollabs/midi_r utz /utz/vocal/pitch ctl 7 17 1.5 0.3
 ;
 #X restore 107 98 pd ctl2vol;
-#N canvas 596 417 450 321 padNotesAdapter 1;
+#N canvas 595 416 450 321 padNotesAdapter 0;
 #X obj 73 93 kollabs/midi_in mpk;
 #X obj 73 125 route note;
 #X msg 73 147 \$3 \$2 \$1;
@@ -52,7 +52,7 @@
 #X restore 229 35 pd mpkMiniAdapter;
 #X connect 0 0 1 0;
 #X restore 219 112 pd MIDI;
-#N canvas 403 228 531 300 init 0;
+#N canvas 402 227 531 300 init 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
 #X msg 41 181 \; pd dsp \$1;
@@ -66,17 +66,20 @@
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
 #X restore 148 64 pd init;
-#N canvas 520 569 561 414 DSP 1;
-#N canvas 1116 549 450 300 master 0;
+#N canvas 516 565 561 414 DSP 0;
+#N canvas 1114 547 450 300 master 0;
 #X obj 44 100 dac~ 1 2;
 #X obj 40 211 kollabs/ds_reg utz /utz/master/volume;
 #X text 44 229 saving master volume for each preset;
-#X obj 44 44 catch~ /utz/master/out;
 #X obj 44 72 env_volume~ master;
-#X connect 3 0 4 0;
-#X connect 4 0 0 0;
+#X obj 43 46 inlet~;
+#X obj 110 46 catch~ /utz/master/out;
+#X connect 3 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
 #X restore 79 312 pd master;
-#N canvas 34 127 450 300 multimelody 0;
+#N canvas 31 124 450 300 multimelody 0;
 #X obj 59 172 throw~ /utz/master/out;
 #X text 53 195 send to master audio out;
 #X obj 60 144 cmpstn/multiMelody multimelody;
@@ -100,37 +103,47 @@
 #X connect 7 0 6 0;
 #X connect 8 0 6 0;
 #X restore 65 34 pd init;
-#X obj 64 86 midi2play 2 36 multimelody;
+#X obj 64 86 midi2trigger note 2 36 multimelody;
 #X connect 2 0 0 0;
 #X restore 79 63 pd multimelody;
 #X text 189 64 intro theme + note 36;
 #X obj 79 111 module_repeater~ bassdrum note 2 51;
-#X obj 79 151 module_repeater~ cymbal note 2 49;
-#X obj 79 131 module_repeater~ snare note 2 50;
-#X obj 79 171 module_poti~ percussion note 2 48 ctl 2 14 1.5 0.3 pitch
+#X obj 109 171 module_poti~ percussion note 2 48 ctl 2 14 1.5 0.3 pitch
 ;
-#X obj 79 191 module_poti~ animal note 2 47 ctl 2 13 1.5 0.3 pitch
+#X obj 119 191 module_poti~ animal note 2 47 ctl 2 13 1.5 0.3 pitch
 ;
-#X obj 79 211 module_poti~ tone note 2 46 ctl 2 12 1.5 0.3 pitch;
-#X obj 79 231 module_poti~ vocal note 2 45 ctl 2 11 1.5 0.3 pitch;
-#X obj 79 251 module_poti~ noise note 2 44 ctl 2 10 1.5 0.3 pitch;
+#X obj 129 211 module_poti~ tone note 2 46 ctl 2 12 1.5 0.3 pitch;
+#X obj 139 231 module_poti~ vocal note 2 45 ctl 2 11 1.5 0.3 pitch
+;
+#X obj 149 251 module_poti~ noise note 2 44 ctl 2 10 1.5 0.3 pitch
+;
+#X obj 99 151 module_repeater~ cymbal note 2 49;
+#X obj 89 131 module_repeater~ snare note 2 50;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
 #X restore 148 160 pd DSP;
 #N canvas 2 87 450 300 presets 0;
-#N canvas 683 332 450 300 kollabs 0;
-#X obj 111 -128 loadbang;
-#X obj 111 -72 t b b;
-#X msg 111 24 \; /ds/utz/scene 1;
-#X obj 111 -4 delay 500;
-#X msg 138 -44 \; /ds/utz/loadfile ../preset.txt;
-#X obj 200 -98 kollabs/ds_logic utz;
-#X obj 111 -100 del 150;
+#N canvas 682 331 450 300 kollabs 0;
+#X obj 111 52 loadbang;
+#X obj 111 108 t b b;
+#X msg 111 204 \; /ds/utz/scene 1;
+#X obj 111 176 delay 500;
+#X msg 138 136 \; /ds/utz/loadfile ../preset.txt;
+#X obj 200 82 kollabs/ds_logic utz;
+#X obj 111 80 del 150;
 #X connect 0 0 6 0;
 #X connect 1 0 3 0;
 #X connect 1 1 4 0;
 #X connect 3 0 2 0;
 #X connect 6 0 1 0;
 #X restore 105 84 pd kollabs;
-#N canvas 420 696 450 300 midi2preset 0;
+#N canvas 419 695 450 300 midi2preset 0;
 #X obj 38 42 pgmin;
 #X obj 38 90 - 1;
 #X obj 38 117 %;
