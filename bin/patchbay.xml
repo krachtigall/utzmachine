@@ -1,6 +1,10 @@
 <!DOCTYPE patchbay>
-<patchbay version="0.4.0" name="patchbay">
+<patchbay version="0.4.1" name="patchbay">
  <output-sockets>
+  <socket exclusive="off" client="pure_data_0" type="jack-audio" name="PureData Stereo Out">
+   <plug>output0</plug>
+   <plug>output1</plug>
+  </socket>
   <socket exclusive="off" client="Arduino Leonardo" type="alsa-midi" name="Arduino Leonardo MIDI 1">
    <plug>Arduino Leonardo MIDI 1</plug>
   </socket>
@@ -9,6 +13,10 @@
   </socket>
  </output-sockets>
  <input-sockets>
+  <socket exclusive="off" client="system" type="jack-audio" name="System Stereo In">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
   <socket exclusive="off" client="Pure Data" type="alsa-midi" name="Pure Data 1">
    <plug>Pure Data Midi-In 1</plug>
   </socket>
@@ -18,8 +26,8 @@
  </input-sockets>
  <slots/>
  <cables>
-  <cable output="Arduino Leonardo MIDI 1" input="Pure Data 1" type="alsa-midi"/>
-  <cable output="MPK mini 1" input="Pure Data 2" type="alsa-midi"/>
+  <cable input="Pure Data 1" type="alsa-midi" output="Arduino Leonardo MIDI 1"/>
+  <cable input="Pure Data 2" type="alsa-midi" output="MPK mini 1"/>
  </cables>
 </patchbay>
 
