@@ -1,5 +1,5 @@
-#N canvas 513 87 467 282 10;
-#N canvas 704 87 1165 989 UI 0;
+#N canvas 389 120 467 282 10;
+#N canvas 698 87 1165 989 UI 0;
 #X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 94 -7 kollabs/ds_gui utz;
@@ -9,31 +9,31 @@
 #X obj 51 38 kollabs/midi_in_gui mpk;
 #X restore 17 28 pd mpk;
 #X obj -1 480 gui_sampler-control bassdrum;
-#X obj 291 480 gui_sampler-control snaredrum;
 #X obj 583 480 gui_sampler-control cymbal;
 #X obj 875 480 gui_sampler-control percussion;
 #X obj -1 281 gui_sampler-control animal;
 #X obj 291 281 gui_sampler-control tone;
-#X obj 583 281 gui_sampler-control voice;
-#X obj 875 281 gui_sampler-control noise;
+#X obj 875 281 gui_sampler-control gun;
+#X obj 291 480 gui_sampler-control snare;
+#X obj 583 281 gui_sampler-control vocal;
 #X restore 148 112 pd UI;
-#N canvas 129 207 447 274 MIDI 0;
+#N canvas 123 201 447 274 MIDI 0;
 #X obj 31 35 kollabs/midi_in utz;
 #X obj 31 88 print MIDI;
 #N canvas 2 87 429 226 mpkMiniAdapter 0;
-#N canvas 2 450 450 300 ctl2vol 0;
+#N canvas 2 449 450 300 ctl2vol 0;
 #X obj 41 48 kollabs/midi_r utz /utz/bassdrum/volume ctl 1 17;
 #X obj 41 68 kollabs/midi_r utz /utz/snare/volume ctl 2 17;
 #X obj 41 88 kollabs/midi_r utz /utz/cymbal/volume ctl 3 17;
 #X obj 41 108 kollabs/midi_r utz /utz/percussion/volume ctl 4 17;
 #X obj 41 128 kollabs/midi_r utz /utz/animal/volume ctl 5 17;
 #X obj 41 148 kollabs/midi_r utz /utz/tone/volume ctl 6 17;
-#X obj 41 168 #kollabs/midi_r utz /utz/vocal/volume ctl 7 17;
-#X obj 40 188 kollabs/midi_r utz /utz/noise/volume ctl 8 17;
 #X obj 40 227 kollabs/midi_r utz /utz/vocal/pitch ctl 7 17 1.5 0.3
 ;
+#X obj 41 168 kollabs/midi_r utz /utz/vocal/volume ctl 7 17;
+#X obj 40 188 kollabs/midi_r utz /utz/gun/volume ctl 8 17;
 #X restore 107 98 pd ctl2vol;
-#N canvas 595 416 450 321 padNotesAdapter 0;
+#N canvas 592 413 459 346 padNotesAdapter 0;
 #X obj 73 93 kollabs/midi_in mpk;
 #X obj 73 125 route note;
 #X msg 73 147 \$3 \$2 \$1;
@@ -52,7 +52,7 @@
 #X restore 229 35 pd mpkMiniAdapter;
 #X connect 0 0 1 0;
 #X restore 219 112 pd MIDI;
-#N canvas 402 227 531 300 init 0;
+#N canvas 400 225 531 300 init 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
 #X msg 41 181 \; pd dsp \$1;
@@ -66,20 +66,20 @@
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
 #X restore 148 64 pd init;
-#N canvas 516 565 561 414 DSP 0;
-#N canvas 1114 547 450 300 master 0;
+#N canvas 999 599 561 414 DSP 0;
+#N canvas 1112 545 450 300 master 0;
 #X obj 44 100 dac~ 1 2;
 #X obj 40 211 kollabs/ds_reg utz /utz/master/volume;
 #X text 44 229 saving master volume for each preset;
-#X obj 44 72 env_volume~ master;
 #X obj 43 46 inlet~;
 #X obj 110 46 catch~ /utz/master/out;
-#X connect 3 0 0 0;
-#X connect 3 0 0 1;
-#X connect 4 0 3 0;
-#X connect 5 0 3 0;
+#X obj 44 72 env_volume~ master;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
 #X restore 79 312 pd master;
-#N canvas 31 124 450 300 multimelody 0;
+#N canvas 30 123 450 300 multimelody 0;
 #X obj 59 172 throw~ /utz/master/out;
 #X text 53 195 send to master audio out;
 #X obj 60 144 cmpstn/multiMelody multimelody;
@@ -115,8 +115,7 @@
 #X obj 129 211 module_poti~ tone note 2 46 ctl 2 12 1.5 0.3 pitch;
 #X obj 139 231 module_poti~ vocal note 2 45 ctl 2 11 1.5 0.3 pitch
 ;
-#X obj 149 251 module_poti~ noise note 2 44 ctl 2 10 1.5 0.3 pitch
-;
+#X obj 149 251 module_poti~ gun note 2 44 ctl 2 10 1.5 0.3 pitch;
 #X obj 99 151 module_repeater~ cymbal note 2 49;
 #X obj 89 131 module_repeater~ snare note 2 50;
 #X connect 3 0 0 0;
@@ -127,9 +126,9 @@
 #X connect 8 0 0 0;
 #X connect 9 0 0 0;
 #X connect 10 0 0 0;
-#X restore 148 160 pd DSP;
+#X restore 149 159 pd DSP;
 #N canvas 2 87 450 300 presets 0;
-#N canvas 682 331 450 300 kollabs 0;
+#N canvas 679 328 450 300 kollabs 0;
 #X obj 111 52 loadbang;
 #X obj 111 108 t b b;
 #X msg 111 204 \; /ds/utz/scene 1;
@@ -143,7 +142,7 @@
 #X connect 3 0 2 0;
 #X connect 6 0 1 0;
 #X restore 105 84 pd kollabs;
-#N canvas 419 695 450 300 midi2preset 0;
+#N canvas 417 693 450 300 midi2preset 0;
 #X obj 38 42 pgmin;
 #X obj 38 90 - 1;
 #X obj 38 117 %;
