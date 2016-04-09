@@ -1,0 +1,105 @@
+#N canvas 221 121 713 852 10;
+#X text 32 628 \$1: module name;
+#X text 32 644 \$2: midi msg type;
+#X text 32 677 \$4: midi value;
+#X text 32 660 \$3: midi channel;
+#X text 33 611 arguments:;
+#X obj 342 390 list;
+#X msg 343 457 trigger 0.7;
+#X msg 342 362 trigger 0.2;
+#X msg 38 148 1;
+#X msg 61 173 0;
+#X msg 80 147 0.7;
+#X msg 115 147 0.5;
+#X obj 174 302 dac~;
+#X text 219 326 alternative ways of interfacing:;
+#X text 283 17 - sampler module;
+#X text 97 176 stop on 0;
+#X obj 27 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 577 191 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 577 210 mute \$1;
+#X obj 549 196 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2900 1;
+#X msg 549 234 volume \$1;
+#X obj 27 352 gui_sampler-control sampler-help;
+#X msg 342 415 \; /utz/sampler-help/\$1 \$2;
+#X obj 343 482 s /utz/sampler-help;
+#X msg 342 513 \; /utz/sampler-help/trigger 1;
+#X obj 548 62 vsl 15 30 0 1000 0 0 /utz/\$1/attack empty A 4 -9 0 10
+-262144 -1 -1 600 1;
+#X obj 568 62 vsl 15 30 0 1000 0 0 /utz/\$1/decay empty D 4 -9 0 10
+-262144 -1 -1 100 1;
+#X obj 588 62 vsl 15 30 0 1 0 0 /utz/\$1/sustain empty S 4 -9 0 10
+-262144 -1 -1 1400 1;
+#X obj 608 62 vsl 15 30 0 1000 0 0 /utz/\$1/release empty R 4 -9 0
+10 -262144 -1 -1 900 1;
+#X msg 548 160 attack \$1;
+#X msg 608 100 release \$1;
+#X msg 588 120 sustain \$1;
+#X msg 568 140 decay \$1;
+#X obj 249 297 kollabs/midi_in utz;
+#X obj 175 270 module_sampler~ sampler-help note 26 44 utz;
+#X obj 448 106 hsl 64 15 0 1 0 0 empty empty right_limit -2 -8 0 10
+-262144 -1 -1 1700 1;
+#X obj 368 106 hsl 64 15 0 1 0 0 empty empty left_limit -2 -8 0 10
+-262144 -1 -1 500 1;
+#X msg 325 218 pitch \$1;
+#X msg 365 126 left \$1;
+#X msg 445 126 right \$1;
+#X obj 445 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 365 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 365 180 loop \$1;
+#X msg 445 180 reverse \$1;
+#X obj 163 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 163 82 openpanel;
+#X msg 163 104 file \$1;
+#X obj 243 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 243 82 load \$1;
+#X text 391 298 <-- needs this in patch to get midi;
+#X obj 325 107 vsl 15 100 0.1 5 0 0 empty empty pitch 0 -9 0 10 -262144
+-1 -1 8500 1;
+#X text 19 62 load wav file! --->>;
+#X obj 161 17 module_sampler~;
+#X connect 5 0 22 0;
+#X connect 6 0 23 0;
+#X connect 7 0 5 0;
+#X connect 8 0 34 0;
+#X connect 9 0 34 0;
+#X connect 10 0 34 0;
+#X connect 11 0 34 0;
+#X connect 16 0 34 0;
+#X connect 17 0 18 0;
+#X connect 18 0 34 1;
+#X connect 19 0 20 0;
+#X connect 20 0 34 1;
+#X connect 25 0 29 0;
+#X connect 26 0 32 0;
+#X connect 27 0 31 0;
+#X connect 28 0 30 0;
+#X connect 29 0 34 1;
+#X connect 30 0 34 1;
+#X connect 31 0 34 1;
+#X connect 32 0 34 1;
+#X connect 34 0 12 0;
+#X connect 34 0 12 1;
+#X connect 35 0 39 0;
+#X connect 36 0 38 0;
+#X connect 37 0 34 1;
+#X connect 38 0 34 1;
+#X connect 39 0 34 1;
+#X connect 40 0 43 0;
+#X connect 41 0 42 0;
+#X connect 42 0 34 1;
+#X connect 43 0 34 1;
+#X connect 44 0 45 0;
+#X connect 45 0 46 0;
+#X connect 46 0 34 1;
+#X connect 47 0 48 0;
+#X connect 48 0 34 1;
+#X connect 50 0 37 0;

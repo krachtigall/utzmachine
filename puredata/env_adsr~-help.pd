@@ -1,16 +1,83 @@
-#N canvas 1151 507 450 300 10;
-#X obj 38 137 osc~ 440;
-#X obj 38 193 dac~ 1 2;
-#X msg 170 88 0;
-#X obj 38 165 env_adsr~ help;
-#X msg 146 54 1;
-#X obj 240 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 47 166 762 725 10;
+#X obj 188 229 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 417 vsl 15 300 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 581 64 dsp ON/OFF;
+#X floatatom 562 106 5 0 0 0 - - -, f 5;
+#X text 602 108 % cpu;
+#X obj 562 65 tgl 15 1 empty empty empty 8 -8 0 10 -262144 -1 -1 1
 1;
-#X msg 240 144 enable \$1;
-#X connect 0 0 3 0;
-#X connect 2 0 3 1;
-#X connect 3 0 1 0;
-#X connect 3 0 1 1;
-#X connect 4 0 3 1;
+#X obj 562 85 iemlib/dsp;
+#X obj 409 312 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 80 256;
+#X obj 382 285 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 50 256;
+#X text 444 285 attack time in ms;
+#X text 470 312 decay time in ms;
+#X obj 382 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 235 1;
+#X obj 409 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 376 1;
+#X obj 461 358 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 150 256;
+#X obj 434 335 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.7 256;
+#X obj 434 216 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3290 1;
+#X obj 461 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 705 1;
+#X text 384 198 A;
+#X text 411 197 D;
+#X text 437 197 S;
+#X text 464 197 R;
+#X text 522 362 release time in ms;
+#X msg 157 229 1;
+#X text 206 227 velocity 0->1;
+#X msg 170 250 0.7;
+#X msg 202 249 0.2;
+#X msg 97 255 0;
+#X text 22 237 zero is noteoff;
+#X text 496 335 sustain value [0->1];
+#X text 108 360 velocity [0->1];
+#X obj 256 383 env_adsr~;
+#X obj 136 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 256 467 iemlib/unsig~ 10;
+#X text 108 404 envelope [0->1];
+#X obj 256 496 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X msg 408 147 80;
+#X msg 433 171 0.7;
+#X obj 427 100 loadbang;
+#X msg 454 148 150;
+#X msg 380 168 50;
+#X text 228 65 - ADSR envelope generator;
+#X obj 154 66 env_adsr~;
+#X connect 0 0 30 0;
 #X connect 5 0 6 0;
-#X connect 6 0 3 1;
+#X connect 6 0 3 0;
+#X connect 7 0 30 2;
+#X connect 8 0 30 1;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 30 4;
+#X connect 14 0 30 3;
+#X connect 15 0 14 0;
+#X connect 16 0 13 0;
+#X connect 22 0 30 0;
+#X connect 24 0 30 0;
+#X connect 25 0 30 0;
+#X connect 26 0 30 0;
+#X connect 30 0 32 0;
+#X connect 31 0 30 0;
+#X connect 32 0 1 0;
+#X connect 32 0 34 0;
+#X connect 35 0 12 0;
+#X connect 36 0 15 0;
+#X connect 37 0 35 0;
+#X connect 37 0 39 0;
+#X connect 37 0 36 0;
+#X connect 37 0 38 0;
+#X connect 38 0 16 0;
+#X connect 39 0 11 0;

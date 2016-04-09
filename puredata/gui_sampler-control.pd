@@ -1,47 +1,55 @@
-#N canvas 1163 583 436 311 10;
+#N canvas 643 148 672 317 10;
 #X obj 26 41 cnv 15 288 178 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 77 48 vsl 15 66 0.01 1 1 0 /utz/\$1/volume /utz/\$1/volume empty
+#X obj 77 47 vsl 15 66 0.01 1 1 0 /utz/\$1/volume /utz/\$1/volume empty
 4 4 0 10 -262144 -1 -1 0 1;
-#X obj 78 122 tgl 15 0 /utz/\$1/mute /utz/\$1/mute M 4 7 0 10 -262144
+#X obj 78 121 tgl 15 0 /utz/\$1/mute /utz/\$1/mute M 4 7 0 10 -262144
 -1 -1 0 1;
-#X obj 36 46 bng 30 250 50 0 /utz/\$1/trigger /utz/\$1/trigger empty
+#X obj 36 45 bng 30 250 50 0 /utz/\$1/trigger /utz/\$1/trigger empty
 17 7 0 10 -262144 -1 -1;
-#X obj 36 87 bng 30 250 50 0 /utz/\$1/trigger /utz/\$1/trigger S 4
+#X obj 36 86 bng 30 250 50 0 /utz/\$1/trigger /utz/\$1/trigger S 4
 7 0 10 -262144 -1 -1;
-#X obj 97 46 tgl 15 0 /utz/\$1/envelope /utz/\$1/envelope E 4 7 0 10
+#X obj 97 45 tgl 15 0 /utz/\$1/envelope /utz/\$1/envelope E 4 7 0 10
 -262144 -1 -1 0 1;
-#X obj -103 214 openpanel;
+#X obj 385 214 openpanel;
 #X obj 36 198 bng 16 250 50 0 empty empty B 4 7 0 10 -262144 -1 -1
 ;
 #X symbolatom 56 198 30 0 0 0 - - -, f 30;
-#X obj -103 259 s /utz/\$1/file;
-#X obj -103 158 r /utz/\$1/file;
-#X obj -103 181 symbol;
-#X obj 97 72 tgl 15 0 /utz/\$1/reverse /utz/\$1/reverse R 4 7 0 10
+#X obj 385 259 s /utz/\$1/file;
+#X obj 385 158 r /utz/\$1/file;
+#X obj 385 181 symbol;
+#X obj 97 71 tgl 15 0 /utz/\$1/reverse /utz/\$1/reverse R 4 7 0 10
 -262144 -1 -1 0 1;
-#X obj 125 72 hsl 128 15 0.25 5 0 0 /utz/\$1/pitch /utz/\$1/pitch pitch
--2 -8 0 10 -262144 -1 -1 2005 1;
-#X obj 125 102 hsl 128 15 0 1 0 0 /utz/\$1/position /utz/\$1/position
+#X obj 125 113 hsl 128 15 0.25 5 0 0 /utz/\$1/pitch /utz/\$1/pitch
+pitch -2 -8 0 10 -262144 -1 -1 2005 1;
+#X obj 125 57 hsl 128 15 0 1 0 0 /utz/\$1/position /utz/\$1/position
 position -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 125 172 hsl 128 15 0 1 0 0 /utz/\$1/right /utz/\$1/right right_limit
+#X obj 125 173 hsl 128 15 0 1 0 0 /utz/\$1/right /utz/\$1/right right_limit
 -2 -8 0 10 -262144 -1 -1 12700 1;
-#X obj 125 142 hsl 128 15 0 1 0 0 /utz/\$1/left /utz/\$1/left left_limit
+#X obj 125 143 hsl 128 15 0 1 0 0 /utz/\$1/left /utz/\$1/left left_limit
 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 97 102 tgl 15 0 /utz/\$1/loop /utz/\$1/loop L 4 7 0 10 -262144
+#X obj 97 101 tgl 15 0 /utz/\$1/loop /utz/\$1/loop L 4 7 0 10 -262144
 -1 -1 0 1;
-#X obj 258 72 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/pitch /utz/\$1/pitch
+#X obj 258 113 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/pitch /utz/\$1/pitch
 empty 0 -8 0 10 -262144 -1 -1 1 256;
-#X obj 258 142 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/left /utz/\$1/left
+#X obj 258 143 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/left /utz/\$1/left
 empty 0 -8 0 10 -262144 -1 -1 0 256;
-#X obj 258 172 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/right /utz/\$1/right
+#X obj 258 173 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/right /utz/\$1/right
 empty 0 -8 0 10 -262144 -1 -1 1 256;
-#X obj 258 102 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/position /utz/\$1/position
+#X obj 258 57 nbx 5 14 -1e+37 1e+37 0 0 /utz/\$1/position /utz/\$1/position
 empty 0 -8 0 10 -262144 -1 -1 0 256;
-#X obj 38 122 tgl 15 0 /utz/\$1/stoppable /utz/\$1/stoppable S 4 7
+#X obj 38 121 tgl 15 0 /utz/\$1/stoppable /utz/\$1/stoppable S 4 7
 0 10 -262144 -1 -1 0 1;
-#X text 29 238 <<<----- TODO!!! relativepath!;
-#X obj -103 236 t a;
+#X text 441 238 <<<----- TODO!!! relativepath!;
+#X obj 385 236 t a;
+#X obj 36 155 vsl 15 30 0 1000 0 0 /utz/\$1/attack empty A 4 -9 0 10
+-262144 -1 -1 1000 1;
+#X obj 56 155 vsl 15 30 0 1000 0 0 /utz/\$1/decay empty D 4 -9 0 10
+-262144 -1 -1 2000 1;
+#X obj 76 155 vsl 15 30 0 1 0 0 /utz/\$1/sustain empty S 4 -9 0 10
+-262144 -1 -1 700 1;
+#X obj 96 155 vsl 15 30 0 1000 0 0 /utz/\$1/release empty R 4 -9 0
+10 -262144 -1 -1 800 1;
 #X connect 6 0 24 0;
 #X connect 7 0 6 0;
 #X connect 10 0 11 0;
