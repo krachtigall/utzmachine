@@ -1,33 +1,31 @@
-#N canvas 148 207 762 725 10;
+#N canvas 147 206 762 725 10;
 #X obj 256 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X floatatom 357 482 5 0 0 0 - - -, f 5;
 #X obj 335 446 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 494 1;
-#X text 228 65 - envelope generator;
+-1 -1 0 1;
 #X text 277 97 trigger envelope restart on bang;
 #X obj 357 444 iemlib/unsig~ 100;
 #X obj 191 449 noise~;
-#X obj 278 661 dac~;
 #X obj 271 624 *~;
 #X obj 409 312 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 127.66 256;
+-1 -1 0 256;
 #X obj 382 285 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 191.489 256;
+-1 -1 0 256;
 #X text 444 285 attack time in ms;
 #X text 470 312 decay time in ms;
 #X obj 382 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 900 1;
+-1 -1 0 1;
 #X obj 409 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 600 1;
+-1 -1 0 1;
 #X obj 461 358 nbx 5 14 0 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 42.5532 256;
+-1 -1 0 256;
 #X obj 434 335 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 0.148936 256;
+-1 -1 0 256;
 #X obj 434 216 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 700 1;
+-1 -1 0 1;
 #X obj 461 216 vsl 15 48 0 1000 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 200 1;
+-1 -1 0 1;
 #X text 384 198 A;
 #X text 411 197 D;
 #X text 437 197 S;
@@ -45,18 +43,17 @@
 #X obj 106 161 makenote 255 90;
 #X obj 86 181 makenote 180 500;
 #X text 496 335 sustain value [0->1];
-#X obj 256 383 env_new~;
 #X obj 131 449 osc~ 70;
 #X obj 192 527 *~;
 #X obj 132 529 *~;
 #X obj 210 472 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 300 1;
+-1 -1 0 1;
 #X obj 150 474 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3400 1;
+-1 -1 0 1;
 #X obj 47 382 mtof;
 #X obj 47 529 *~;
 #X obj 65 474 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3700 1;
+-1 -1 0 1;
 #X obj 47 449 phasor~ 70;
 #N canvas 713 225 450 250 (subpatch) 0;
 #X array \$0-array 88000 float 3;
@@ -2723,7 +2720,7 @@
 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
-0.105131 ;
+0.105131;
 #A 21000 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131 0.105131
@@ -6942,9 +6939,6 @@
 #X coords 0 1 88000 -1 200 140 1;
 #X restore 496 467 graph;
 #X obj 501 422 tabwrite~ \$0-array;
-#X obj 411 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 411 63 t b b;
 #X text 90 245 message: $NOTE $VEL;
 #X text 28 417 pitch frequency;
 #X text 27 356 MIDI note number;
@@ -6953,66 +6947,58 @@
 #X floatatom 79 114 5 0 0 0 - - -, f 5;
 #X floatatom 131 116 5 0 0 0 - - -, f 5;
 #X obj 140 427 / 2;
-#X obj 154 66 env_new~;
 #X obj 163 632 vcf~ 1;
 #X obj 254 556 * 10;
 #X obj 300 434 vsl 15 48 0 40 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X text 48 560 example signal-sources;
 #X obj 237 578 +~;
-#X obj 360 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 437 9 metro 1500;
-#X connect 0 0 36 0;
-#X connect 5 0 1 0;
-#X connect 5 0 2 0;
-#X connect 6 0 38 0;
-#X connect 8 0 7 0;
-#X connect 8 0 7 1;
-#X connect 9 0 36 2;
-#X connect 10 0 36 1;
-#X connect 13 0 10 0;
-#X connect 14 0 9 0;
-#X connect 15 0 36 4;
-#X connect 16 0 36 3;
-#X connect 17 0 16 0;
-#X connect 18 0 15 0;
-#X connect 24 0 36 0;
-#X connect 26 0 36 0;
-#X connect 27 0 36 0;
-#X connect 28 0 36 0;
-#X connect 30 0 36 0;
-#X connect 31 0 32 0;
-#X connect 32 0 42 0;
-#X connect 32 1 30 0;
-#X connect 33 0 31 0;
-#X connect 33 1 31 1;
-#X connect 34 0 31 0;
-#X connect 34 1 31 1;
-#X connect 36 0 5 0;
-#X connect 36 0 8 1;
-#X connect 36 0 47 0;
-#X connect 36 0 63 0;
-#X connect 37 0 39 0;
-#X connect 38 0 59 0;
-#X connect 39 0 59 0;
-#X connect 40 0 38 1;
-#X connect 41 0 39 1;
-#X connect 42 0 45 0;
-#X connect 42 0 57 0;
-#X connect 42 0 60 0;
-#X connect 43 0 59 0;
-#X connect 44 0 43 1;
-#X connect 45 0 43 0;
-#X connect 48 0 49 0;
-#X connect 49 0 55 0;
-#X connect 49 1 47 0;
-#X connect 55 0 34 0;
-#X connect 56 0 33 0;
-#X connect 57 0 37 0;
-#X connect 59 1 8 0;
-#X connect 60 0 63 1;
-#X connect 61 0 60 1;
-#X connect 63 0 59 1;
-#X connect 64 0 65 0;
-#X connect 65 0 48 0;
+#X obj 278 661 outlet~;
+#X obj 257 382 env_adsr~;
+#X connect 0 0 59 0;
+#X connect 4 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 35 0;
+#X connect 6 0 58 0;
+#X connect 7 0 59 2;
+#X connect 8 0 59 1;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 59 4;
+#X connect 14 0 59 3;
+#X connect 15 0 14 0;
+#X connect 16 0 13 0;
+#X connect 22 0 59 0;
+#X connect 24 0 59 0;
+#X connect 25 0 59 0;
+#X connect 26 0 59 0;
+#X connect 28 0 59 0;
+#X connect 29 0 30 0;
+#X connect 30 0 39 0;
+#X connect 30 1 28 0;
+#X connect 31 0 29 0;
+#X connect 31 1 29 1;
+#X connect 32 0 29 0;
+#X connect 32 1 29 1;
+#X connect 34 0 36 0;
+#X connect 35 0 53 0;
+#X connect 36 0 53 0;
+#X connect 37 0 35 1;
+#X connect 38 0 36 1;
+#X connect 39 0 42 0;
+#X connect 39 0 52 0;
+#X connect 39 0 54 0;
+#X connect 40 0 53 0;
+#X connect 41 0 40 1;
+#X connect 42 0 40 0;
+#X connect 50 0 32 0;
+#X connect 51 0 31 0;
+#X connect 52 0 34 0;
+#X connect 53 1 6 0;
+#X connect 54 0 57 1;
+#X connect 55 0 54 1;
+#X connect 57 0 53 1;
+#X connect 59 0 4 0;
+#X connect 59 0 6 1;
+#X connect 59 0 44 0;
+#X connect 59 0 57 0;
