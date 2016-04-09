@@ -109,6 +109,11 @@
 #X obj 157 163 r /\$5/\$1;
 #X obj 129 143 r /\$5/\$1/velocity;
 #X obj 210 292 outlet ctl-out;
+#X text 403 123 \$1: module name;
+#X text 403 139 \$2: midi msg type;
+#X text 403 172 \$4: midi value;
+#X text 403 155 \$3: midi channel;
+#X text 403 188 \$5: domain name;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
 #X connect 3 0 5 1;
