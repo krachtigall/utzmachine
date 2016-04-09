@@ -1,0 +1,45 @@
+#N canvas 500 198 724 684 10;
+#X obj 197 196 pack f f;
+#X obj 217 156 makenote 255 90;
+#X obj 197 176 makenote 180 500;
+#X floatatom 190 109 5 0 0 0 - - -, f 5;
+#X floatatom 242 111 5 0 0 0 - - -, f 5;
+#X obj 276 402 kollabs/midi_in utz;
+#X text 418 403 <-- needs this in patch to get midi;
+#X obj 161 405 dac~;
+#X obj 162 369 module_synth~ bass note 17 utz;
+#X floatatom 43 595 5 0 0 0 - - -, f 5;
+#X obj 129 587 vsl 15 48 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 43 557 iemlib/unsig~ 100;
+#X obj 435 191 vsl 15 30 0 1000 0 0 /utz/\$1/attack empty A 4 -9 0
+10 -262144 -1 -1 100 1;
+#X obj 455 191 vsl 15 30 0 1000 0 0 /utz/\$1/decay empty D 4 -9 0 10
+-262144 -1 -1 900 1;
+#X obj 475 191 vsl 15 30 0 1 0 0 /utz/\$1/sustain empty S 4 -9 0 10
+-262144 -1 -1 700 1;
+#X obj 495 191 vsl 15 30 0 1000 0 0 /utz/\$1/release empty R 4 -9 0
+10 -262144 -1 -1 900 1;
+#X msg 435 289 attack \$1;
+#X msg 495 229 release \$1;
+#X msg 475 249 sustain \$1;
+#X msg 455 269 decay \$1;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 0 0;
+#X connect 2 1 0 1;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 8 0 7 0;
+#X connect 8 0 7 1;
+#X connect 8 0 11 0;
+#X connect 11 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 16 0;
+#X connect 13 0 19 0;
+#X connect 14 0 18 0;
+#X connect 15 0 17 0;
+#X connect 16 0 8 1;
+#X connect 17 0 8 1;
+#X connect 18 0 8 1;
+#X connect 19 0 8 1;
