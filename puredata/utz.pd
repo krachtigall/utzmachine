@@ -1,27 +1,24 @@
-#N canvas 128 92 467 282 10;
-#N canvas 696 87 1165 989 UI 0;
-#X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
+#N canvas 125 89 467 282 10;
+#N canvas 694 87 1165 989 UI 0;
+#X obj 10 77 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
-#X obj 94 -7 kollabs/ds_gui utz;
-#X obj 834 -7 gui_master;
-#X obj 275 -7 kollabs/midi_in_gui utz;
-#N canvas 525 350 450 300 mpk 0;
-#X obj 51 38 kollabs/midi_in_gui mpk;
-#X restore 17 28 pd mpk;
-#X obj -1 480 gui_sampler-control bassdrum;
-#X obj 583 480 gui_sampler-control cymbal;
-#X obj 875 480 gui_sampler-control percussion;
-#X obj -1 281 gui_sampler-control animal;
-#X obj 291 281 gui_sampler-control tone;
-#X obj 875 281 gui_sampler-control gun;
-#X obj 291 480 gui_sampler-control snare;
-#X obj 583 281 gui_sampler-control vocal;
+#X obj 94 73 kollabs/ds_gui utz;
+#X obj 834 73 gui_master;
+#X obj 275 73 kollabs/midi_in_gui utz;
+#X obj -1 560 gui_sampler-control bassdrum;
+#X obj 583 560 gui_sampler-control cymbal;
+#X obj 875 560 gui_sampler-control percussion;
+#X obj -1 361 gui_sampler-control animal;
+#X obj 291 361 gui_sampler-control tone;
+#X obj 875 361 gui_sampler-control gun;
+#X obj 291 560 gui_sampler-control snare;
+#X obj 583 361 gui_sampler-control vocal;
 #X restore 148 112 pd UI;
-#N canvas 351 644 447 274 MIDI 0;
+#N canvas 348 641 447 274 MIDI 0;
 #X obj 31 35 kollabs/midi_in utz;
 #X obj 31 88 print MIDI;
-#N canvas 434 704 443 252 mpkMiniAdapter 0;
-#N canvas 19 638 450 300 ctl2vol 0;
+#N canvas 598 683 443 252 mpkMiniAdapter 0;
+#N canvas 18 637 450 300 ctl2vol 0;
 #X obj 41 48 kollabs/midi_r utz /utz/bassdrum/volume ctl 1 17;
 #X obj 41 68 kollabs/midi_r utz /utz/snare/volume ctl 2 17;
 #X obj 41 88 kollabs/midi_r utz /utz/cymbal/volume ctl 3 17;
@@ -44,8 +41,8 @@
 #X connect 8 0 7 0;
 #X connect 9 0 10 0;
 #X connect 10 0 8 0;
-#X restore 107 98 pd ctl2vol;
-#N canvas 1118 363 459 346 padNotesAdapter 0;
+#X restore 37 98 pd ctl2vol;
+#N canvas 1117 362 459 346 padNotesAdapter 0;
 #X obj 73 93 kollabs/midi_in mpk;
 #X obj 73 125 route note;
 #X msg 73 147 \$3 \$2 \$1;
@@ -60,8 +57,8 @@
 #X connect 2 0 5 0;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
-#X restore 107 72 pd padNotesAdapter;
-#N canvas 455 222 450 366 ctlPotisAdapter 0;
+#X restore 37 72 pd padNotesAdapter;
+#N canvas 454 221 450 366 ctlPotisAdapter 0;
 #X obj 73 73 kollabs/midi_in mpk;
 #X msg 73 127 \$3 \$2 \$1;
 #X obj 73 304 s /midi/utz/in;
@@ -82,11 +79,13 @@
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
 #X connect 10 0 2 0;
-#X restore 104 23 pd ctlPotisAdapter;
+#X restore 34 23 pd ctlPotisAdapter;
+#X obj 200 58 kollabs/midi_in_gui mpk;
+#X obj 222 21 kollabs/midi_in mpk;
 #X restore 229 35 pd mpkMiniAdapter;
 #X connect 0 0 1 0;
 #X restore 219 112 pd MIDI;
-#N canvas 400 225 531 300 init 0;
+#N canvas 399 224 531 300 init 0;
 #X obj 41 31 loadbang;
 #X msg 41 57 1;
 #X msg 41 181 \; pd dsp \$1;
@@ -100,7 +99,7 @@
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
 #X restore 148 64 pd init;
-#N canvas 980 545 561 414 DSP 0;
+#N canvas 977 542 561 414 DSP 0;
 #N canvas 1112 545 450 300 master 0;
 #X obj 44 100 dac~ 1 2;
 #X obj 40 211 kollabs/ds_reg utz /utz/master/volume;
@@ -141,8 +140,6 @@
 #X connect 2 0 0 0;
 #X restore 79 63 pd multimelody;
 #X text 189 64 intro theme + note 36;
-#X obj 99 151 module_sampler~ cymbal note 2 49 utz;
-#X obj 89 131 module_sampler~ snare note 2 50 utz;
 #X obj 79 111 module_repeater~ bassdrum note 2 51 utz;
 #X obj 119 191 module_poti~ animal note 2 47 utz ctl 2 13 1.5 0.3 pitch
 ;
@@ -154,6 +151,8 @@
 ;
 #X obj 109 171 module_poti~ percussion note 2 48 utz ctl 2 14 1.5 0.5
 pitch;
+#X obj 99 151 module_sampler~ cymbal note 2 49 utz;
+#X obj 89 131 module_sampler~ snare note 2 50 utz;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
@@ -178,7 +177,7 @@ pitch;
 #X connect 3 0 2 0;
 #X connect 6 0 1 0;
 #X restore 105 84 pd kollabs;
-#N canvas 417 693 450 300 midi2preset 0;
+#N canvas 416 692 450 300 midi2preset 0;
 #X obj 38 42 pgmin;
 #X obj 38 90 - 1;
 #X obj 38 117 %;
