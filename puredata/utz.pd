@@ -1,4 +1,4 @@
-#N canvas 387 118 467 282 10;
+#N canvas 132 96 467 282 10;
 #N canvas 697 87 1165 989 UI 0;
 #X obj 10 -3 tgl 15 0 $dspStatusOut $dspStatusIn dsp 17 7 0 10 -262144
 -1 -1 1 1;
@@ -66,7 +66,7 @@
 #X connect 3 0 2 0;
 #X connect 5 0 4 0;
 #X restore 148 64 pd init;
-#N canvas 996 596 561 414 DSP 0;
+#N canvas 994 594 561 414 DSP 1;
 #N canvas 1112 545 450 300 master 0;
 #X obj 44 100 dac~ 1 2;
 #X obj 40 211 kollabs/ds_reg utz /utz/master/volume;
@@ -111,15 +111,15 @@
 0.3 pitch;
 #X obj 99 151 module_sampler~ cymbal note 2 49 utz;
 #X obj 89 131 module_sampler~ snare note 2 50 utz;
-#X obj 119 205 module_sampler~ animal note 2 47 utz ctl 2 13 1.5 0.3
-pitch;
-#X obj 128 235 module_sampler~ tone note 2 46 utz ctl 2 12 1.5 0.3
-pitch;
-#X obj 139 255 module_sampler~ vocal note 2 45 utz ctl 2 11 1.5 0.3
-pitch;
-#X obj 79 111 module_sampler~ bassdrum note 2 51 utz;
 #X obj 149 275 module_sampler~ gun note 2 44 utz ctl 2 10 1.5 0.3 pitch
 ;
+#X obj 119 205 module_poti~ animal note 2 47 utz ctl 2 13 1.5 0.3 pitch
+;
+#X obj 128 235 module_poti~ tone note 2 46 utz ctl 2 12 1.5 0.3 pitch
+;
+#X obj 139 255 module_poti~ vocal note 2 45 utz ctl 2 11 1.5 0.3 pitch
+;
+#X obj 79 111 module_repeater~ bassdrum note 2 51 utz;
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
