@@ -1,12 +1,12 @@
-#N canvas 1319 515 488 433 10;
-#N canvas 1194 267 667 708 fileloading 1;
+#N canvas 566 130 488 433 10;
+#N canvas 543 88 667 708 fileloading 0;
 #X obj 106 328 soundfiler;
 #X obj 152 384 \$0;
 #X obj 106 272 pack s f;
 #X obj 129 239 \$0;
 #N canvas 2 87 450 300 (subpatch) 0;
-#X array \$0-sample-array 7800 float 2;
-#X coords 0 1 7800 -1 200 140 1;
+#X array \$0-sample-array 9957 float 2;
+#X coords 0 1 9957 -1 200 140 1;
 #X restore 398 127 graph;
 #X obj 145 157 symbol;
 #X obj 106 202 t s b b;
@@ -238,7 +238,7 @@
 #X connect 12 0 8 0;
 #X connect 14 0 8 0;
 #X restore 176 232 pd trigger-hold;
-#X obj 173 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 173 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 173 152 t f f f f;
 #N canvas 2 87 450 300 stop 0;
