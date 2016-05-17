@@ -1,4 +1,4 @@
-#N canvas 221 121 713 852 10;
+#N canvas 220 120 713 852 10;
 #X text 32 628 \$1: module name;
 #X text 32 644 \$2: midi msg type;
 #X text 32 677 \$4: midi value;
@@ -21,20 +21,20 @@
 1;
 #X msg 577 210 mute \$1;
 #X obj 549 196 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2900 1;
+-1 -1 0 1;
 #X msg 549 234 volume \$1;
 #X obj 27 352 gui_sampler-control sampler-help;
 #X msg 342 415 \; /utz/sampler-help/\$1 \$2;
 #X obj 343 482 s /utz/sampler-help;
 #X msg 342 513 \; /utz/sampler-help/trigger 1;
 #X obj 548 62 vsl 15 30 0 1000 0 0 /utz/\$1/attack empty A 4 -9 0 10
--262144 -1 -1 600 1;
+-262144 -1 -1 0 1;
 #X obj 568 62 vsl 15 30 0 1000 0 0 /utz/\$1/decay empty D 4 -9 0 10
--262144 -1 -1 100 1;
+-262144 -1 -1 0 1;
 #X obj 588 62 vsl 15 30 0 1 0 0 /utz/\$1/sustain empty S 4 -9 0 10
--262144 -1 -1 1400 1;
+-262144 -1 -1 0 1;
 #X obj 608 62 vsl 15 30 0 1000 0 0 /utz/\$1/release empty R 4 -9 0
-10 -262144 -1 -1 900 1;
+10 -262144 -1 -1 0 1;
 #X msg 548 160 attack \$1;
 #X msg 608 100 release \$1;
 #X msg 588 120 sustain \$1;
@@ -42,15 +42,15 @@
 #X obj 249 297 kollabs/midi_in utz;
 #X obj 175 270 module_sampler~ sampler-help note 26 44 utz;
 #X obj 448 106 hsl 64 15 0 1 0 0 empty empty right_limit -2 -8 0 10
--262144 -1 -1 1700 1;
+-262144 -1 -1 0 1;
 #X obj 368 106 hsl 64 15 0 1 0 0 empty empty left_limit -2 -8 0 10
--262144 -1 -1 500 1;
+-262144 -1 -1 0 1;
 #X msg 325 218 pitch \$1;
 #X msg 365 126 left \$1;
 #X msg 445 126 right \$1;
 #X obj 445 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 365 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 365 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 365 180 loop \$1;
 #X msg 445 180 reverse \$1;
@@ -63,9 +63,11 @@
 #X msg 243 82 load \$1;
 #X text 391 298 <-- needs this in patch to get midi;
 #X obj 325 107 vsl 15 100 0.1 5 0 0 empty empty pitch 0 -9 0 10 -262144
--1 -1 8500 1;
+-1 -1 0 1;
 #X text 19 62 load wav file! --->>;
 #X obj 161 17 module_sampler~;
+#X msg 159 216 bang;
+#X msg 207 216 stop;
 #X connect 5 0 22 0;
 #X connect 6 0 23 0;
 #X connect 7 0 5 0;
@@ -103,3 +105,5 @@
 #X connect 47 0 48 0;
 #X connect 48 0 34 1;
 #X connect 50 0 37 0;
+#X connect 53 0 34 0;
+#X connect 54 0 34 0;
