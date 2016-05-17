@@ -17,7 +17,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -106,7 +105,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -195,7 +193,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -284,7 +281,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -373,7 +369,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -462,7 +457,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -551,7 +545,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
@@ -640,7 +633,6 @@
 # SETTINGS
 # TABLES
 # DATA
-/utz/master/mute 0
 /utz/master/volume 1
 /utz/snare/mute 0
 /utz/snare/reverse 0
