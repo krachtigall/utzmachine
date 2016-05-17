@@ -1,17 +1,19 @@
-#N canvas 2 87 450 333 10;
+#N canvas 53 315 450 333 10;
 #X text 83 295 send to master audio out;
 #X obj 90 272 outlet~;
 #X obj 91 175 module_sampler~ \$1 \$2 \$3 \$4 \$5;
 #X obj 298 85 inlet ctl-in;
 #X obj 91 85 inlet velocity;
-#N canvas 506 302 450 300 midi 0;
+#N canvas 557 339 450 300 midi 1;
 #X obj 99 140 r \$0-midi-ctl;
-#X obj 99 185 prepend \$11;
 #X obj 99 229 outlet;
 #X obj 101 91 kollabs/midi_r \$5 \$0-midi-ctl \$6 \$8 \$7 \$9 \$10
 ;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
+#X obj 99 165 list prepend \$11;
+#X obj 99 187 route list;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
 #X restore 319 137 pd midi;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
